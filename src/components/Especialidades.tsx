@@ -48,7 +48,7 @@ const especialidades = [
 
 export default function Especialidades() {
   return (
-    <section id="areas" className="bg-sand py-20 md:py-28">
+    <section id="areas" className="bg-background py-20 md:py-28">
       <div className="mx-auto max-w-6xl px-6">
         <div className="max-w-xl">
           <h2 className="font-serif text-3xl text-ink md:text-4xl">
@@ -61,10 +61,14 @@ export default function Especialidades() {
           </p>
         </div>
 
-        <div className="mt-12 grid gap-px overflow-hidden rounded-sm border border-border-soft bg-border-soft sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {especialidades.map((item) => (
-            <div key={item.titulo} className="bg-sand p-8">
-              <h3 className="font-serif text-xl text-ink">{item.titulo}</h3>
+            <div
+              key={item.titulo}
+              className="rounded-sm border border-border-soft bg-background p-8"
+            >
+              <div className="h-[3px] w-10 bg-accent" />
+              <h3 className="mt-4 font-serif text-xl text-ink">{item.titulo}</h3>
               <p className="mt-3 text-sm leading-relaxed text-ink-soft">
                 {item.texto}
               </p>

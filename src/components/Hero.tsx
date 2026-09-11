@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function Hero() {
   return (
     <section className="border-b border-border-soft bg-background">
-      <div className="mx-auto grid max-w-6xl gap-12 px-6 py-20 md:grid-cols-12 md:py-28">
+      <div className="mx-auto grid max-w-6xl items-center gap-12 px-6 py-20 md:grid-cols-12 md:py-28">
         <div className="md:col-span-7">
           <p className="text-sm text-accent-dark">
             Las Palmas de Gran Canaria &mdash; desde hace más de 15 años
@@ -35,35 +35,15 @@ export default function Hero() {
           </div>
         </div>
 
-        <div className="md:col-span-5 md:pt-4">
+        <div className="md:col-span-5">
           <Image
             src="/images/hero-socias.jpg"
             alt="Estefanía Pérez y Saro Morales, socias fundadoras de Curia Abogados, en su despacho"
             width={600}
-            height={448}
-            className="w-full rounded-sm object-cover"
+            height={720}
+            className="h-full w-full rounded-sm object-cover"
             priority
           />
-
-          <div className="mt-8 border-l-2 border-accent pl-6">
-            <p className="font-serif text-lg italic leading-relaxed text-ink">
-              &ldquo;Muchas gracias por ayudarme con la recuperación de la
-              vivienda. Un buen equipo de profesionales, siempre atenta para
-              pasarme la información que necesitaba.&rdquo;
-            </p>
-            <p className="mt-4 text-sm text-ink-soft">Alba M.P. &mdash; cliente</p>
-          </div>
-
-          <dl className="mt-12 grid grid-cols-2 gap-8 border-t border-border-soft pt-8">
-            <div>
-              <dt className="text-sm text-ink-soft">Experiencia</dt>
-              <dd className="font-serif text-3xl text-ink">15+ años</dd>
-            </div>
-            <div>
-              <dt className="text-sm text-ink-soft">Fundadoras</dt>
-              <dd className="font-serif text-3xl text-ink">2 abogadas</dd>
-            </div>
-          </dl>
         </div>
       </div>
     </section>
