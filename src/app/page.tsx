@@ -3,7 +3,6 @@ import Hero from "@/components/Hero";
 import Especialidades from "@/components/Especialidades";
 import QuienesSomos from "@/components/QuienesSomos";
 import Testimonios from "@/components/Testimonios";
-import YouTubeSection from "@/components/YouTube";
 import CtaBand from "@/components/CtaBand";
 import Footer from "@/components/Footer";
 
@@ -15,7 +14,6 @@ export default function Home() {
       <Especialidades />
       <QuienesSomos />
       <Testimonios />
-      <YouTubeSection />
       <CtaBand />
       <Footer />
     </main>
