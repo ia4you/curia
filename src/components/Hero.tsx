@@ -3,12 +3,12 @@ import Image from "next/image";
 export default function Hero() {
   return (
     <section className="border-b border-border-soft bg-background">
-      <div className="mx-auto grid max-w-6xl items-center gap-12 px-6 py-20 md:grid-cols-12 md:py-28">
+      <div className="mx-auto grid max-w-6xl items-center gap-12 px-6 py-24 md:grid-cols-12 md:py-40">
         <div className="md:col-span-7">
           <p className="text-sm text-accent-dark">
             Las Palmas de Gran Canaria &mdash; desde hace más de 15 años
           </p>
-          <h1 className="mt-4 font-serif text-4xl leading-[1.1] text-ink md:text-6xl">
+          <h1 className="mt-4 font-serif text-5xl leading-[1.05] text-ink md:text-7xl">
             Primero en el tiempo,
             <br />
             <span className="italic text-accent-dark">mejor en el Derecho.</span>
@@ -37,7 +37,7 @@ export default function Hero() {
 
         <div className="md:col-span-5">
           <Image
-            src="/images/hero-socias.jpg"
+            src="/images/equipo.png"
             alt="Estefanía Pérez y Saro Morales, socias fundadoras de Curia Abogados, en su despacho"
             width={600}
             height={720}

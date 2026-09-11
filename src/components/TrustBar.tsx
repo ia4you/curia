@@ -14,7 +14,7 @@ export default function TrustBar() {
             key={dato.etiqueta}
             className="px-6 md:border-l md:border-border-soft md:first:border-l-0"
           >
-            <p className="font-serif text-2xl text-accent md:text-3xl">
+            <p className="font-serif text-4xl text-accent md:text-5xl">
               {dato.valor}
             </p>
             <p className="mt-1 text-xs text-ink-soft">{dato.etiqueta}</p>
