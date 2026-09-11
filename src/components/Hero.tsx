@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function Hero() {
   return (
     <section className="border-b border-border-soft bg-background">
@@ -34,7 +36,16 @@ export default function Hero() {
         </div>
 
         <div className="md:col-span-5 md:pt-4">
-          <div className="border-l-2 border-accent pl-6">
+          <Image
+            src="/images/hero-socias.jpg"
+            alt="Estefanía Pérez y Saro Morales, socias fundadoras de Curia Abogados, en su despacho"
+            width={600}
+            height={448}
+            className="w-full rounded-sm object-cover"
+            priority
+          />
+
+          <div className="mt-8 border-l-2 border-accent pl-6">
             <p className="font-serif text-lg italic leading-relaxed text-ink">
               &ldquo;Muchas gracias por ayudarme con la recuperación de la
               vivienda. Un buen equipo de profesionales, siempre atenta para

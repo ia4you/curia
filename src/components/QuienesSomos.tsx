@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function QuienesSomos() {
   return (
     <section id="equipo" className="bg-accent py-20 md:py-28">
@@ -37,7 +39,14 @@ export default function QuienesSomos() {
 
         <div id="fincas" className="md:col-span-6">
           <div className="h-full rounded-sm border border-accent-dark/10 bg-background p-10">
-            <h3 className="font-serif text-2xl text-ink">
+            <Image
+              src="/images/edificio-fincas.jpg"
+              alt="Ilustración de un edificio gestionado por administración de fincas"
+              width={400}
+              height={299}
+              className="w-full rounded-sm object-cover"
+            />
+            <h3 className="mt-6 font-serif text-2xl text-ink">
               Administradores de fincas
             </h3>
             <p className="mt-4 leading-relaxed text-ink-soft">

@@ -1,5 +1,6 @@
 import fs from "fs";
 import path from "path";
+import Image from "next/image";
 
 const hasAvatar = fs.existsSync(
   path.join(process.cwd(), "public", "images", "avatar-testimonio.jpg")
@@ -39,9 +40,11 @@ export default function Testimonios() {
               </p>
               <div className="mt-4 flex items-center gap-3">
                 {hasAvatar && (
-                  <img
+                  <Image
                     src="/images/avatar-testimonio.jpg"
                     alt={t.autor}
+                    width={96}
+                    height={96}
                     className="w-12 h-12 rounded-full object-cover"
                   />
                 )}
