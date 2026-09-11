@@ -1,8 +1,8 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
-import TrustBar from "@/components/TrustBar";
-import Especialidades from "@/components/Especialidades";
+import ProcedimientosCards from "@/components/ProcedimientosCards";
 import QuienesSomos from "@/components/QuienesSomos";
+import Especialidades from "@/components/Especialidades";
 import Testimonios from "@/components/Testimonios";
 import CtaBand from "@/components/CtaBand";
 import Footer from "@/components/Footer";
@@ -12,9 +12,9 @@ export default function Home() {
     <main>
       <Header />
       <Hero />
-      <TrustBar />
-      <Especialidades />
+      <ProcedimientosCards />
       <QuienesSomos />
+      <Especialidades />
       <Testimonios />
       <CtaBand />
       <Footer />

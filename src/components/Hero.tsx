@@ -2,50 +2,46 @@ import Image from "next/image";
 
 export default function Hero() {
   return (
-    <section className="border-b border-border-soft bg-background">
-      <div className="mx-auto grid max-w-6xl items-center gap-12 px-6 py-24 md:grid-cols-12 md:py-40">
-        <div className="md:col-span-7">
-          <p className="text-sm text-accent-dark">
-            Las Palmas de Gran Canaria &mdash; desde hace más de 15 años
-          </p>
-          <h1 className="mt-4 font-serif text-5xl leading-[1.05] text-ink md:text-7xl">
-            Primero en el tiempo,
-            <br />
-            <span className="italic text-accent-dark">mejor en el Derecho.</span>
-          </h1>
-          <p className="mt-6 max-w-md text-base leading-relaxed text-ink-soft">
-            Somos Estefanía Pérez y Saro Morales. Ayudamos a solucionar los
-            conflictos que se originan en la vida cotidiana de las personas,
-            con un trato cercano, honesto y profesional.
-          </p>
-
-          <div className="mt-8 flex flex-wrap gap-4">
-            <a
-              href="#contacto"
-              className="rounded-sm bg-accent px-6 py-3 text-sm font-medium text-accent-dark transition-opacity hover:opacity-90"
-            >
-              Pedir consulta online
-            </a>
-            <a
-              href="tel:+34928248581"
-              className="rounded-sm border border-ink px-6 py-3 text-sm font-medium text-ink transition-colors hover:border-accent-dark hover:text-accent-dark"
-            >
-              Llamar ahora &mdash; 928 248 581
-            </a>
-          </div>
-        </div>
-
-        <div className="md:col-span-5">
-          <Image
-            src="/images/equipo.png"
-            alt="Estefanía Pérez y Saro Morales, socias fundadoras de Curia Abogados, en su despacho"
-            width={600}
-            height={720}
-            className="h-full w-full rounded-sm object-cover"
-            priority
-          />
-        </div>
+    <section className="relative overflow-hidden bg-ink">
+      <div className="absolute inset-0">
+        <Image
+          src="/images/equipo.png"
+          alt="Equipo de Curia Abogados"
+          fill
+          priority
+          className="object-cover"
+        />
+        <div className="absolute inset-0 bg-ink/70" />
       </div>
+
+      <div className="relative mx-auto max-w-6xl px-6 py-32 md:py-44">
+        <p className="text-sm font-bold uppercase tracking-widest text-white">
+          Directo, rápido y eficaz
+        </p>
+        <h1 className="mt-4 font-serif text-5xl font-bold uppercase leading-[1.05] text-accent md:text-7xl">
+          Curia Abogados
+        </h1>
+        <p className="mt-6 max-w-xl font-serif text-2xl italic text-white md:text-3xl">
+          &ldquo;Primero en el tiempo, mejor en el Derecho&rdquo;
+        </p>
+        <p className="mt-6 max-w-md text-base leading-relaxed text-white/80">
+          Nos avala la experiencia de más de 15 años ayudando a solucionar los
+          conflictos que se originan en la vida cotidiana de las personas, con
+          un trato cercano, honesto y profesional.
+        </p>
+      </div>
+
+      <svg
+        className="absolute bottom-0 left-0 h-24 w-full text-accent md:h-32"
+        viewBox="0 0 1440 160"
+        preserveAspectRatio="none"
+        aria-hidden="true"
+      >
+        <path
+          fill="currentColor"
+          d="M0,160 L0,80 C240,20 480,140 720,90 C960,40 1200,120 1440,60 L1440,160 Z"
+        />
+      </svg>
     </section>
   );
 }
