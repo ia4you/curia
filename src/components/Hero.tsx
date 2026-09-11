@@ -9,9 +9,9 @@ export default function Hero() {
           alt="Equipo de Curia Abogados"
           fill
           priority
-          className="object-cover"
+          className="object-cover object-top"
         />
-        <div className="absolute inset-0 bg-ink/70" />
+        <div className="absolute inset-0 bg-gradient-to-r from-ink/70 via-ink/20 to-transparent" />
       </div>
 
       <div className="relative mx-auto max-w-6xl px-6 py-32 md:py-44">
@@ -32,15 +32,12 @@ export default function Hero() {
       </div>
 
       <svg
-        className="absolute bottom-0 left-0 h-24 w-full text-accent md:h-32"
-        viewBox="0 0 1440 160"
+        className="absolute bottom-0 right-0 h-16 w-1/2 text-accent md:h-24 md:w-1/3"
+        viewBox="0 0 400 160"
         preserveAspectRatio="none"
         aria-hidden="true"
       >
-        <path
-          fill="currentColor"
-          d="M0,160 L0,80 C240,20 480,140 720,90 C960,40 1200,120 1440,60 L1440,160 Z"
-        />
+        <path fill="currentColor" d="M400,0 L400,160 L160,160 Z" />
       </svg>
     </section>
   );
