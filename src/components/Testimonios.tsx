@@ -1,3 +1,10 @@
+import fs from "fs";
+import path from "path";
+
+const hasAvatar = fs.existsSync(
+  path.join(process.cwd(), "public", "images", "avatar-testimonio.jpg")
+);
+
 const testimonios = [
   {
     texto:
@@ -18,19 +25,28 @@ const testimonios = [
 
 export default function Testimonios() {
   return (
-    <section className="bg-background py-20 md:py-28">
+    <section className="bg-accent py-20 md:py-28">
       <div className="mx-auto max-w-6xl px-6">
-        <h2 className="font-serif text-3xl text-ink md:text-4xl">
+        <h2 className="font-serif text-3xl text-accent-dark md:text-4xl">
           Lo que dicen de nosotros
         </h2>
 
         <div className="mt-12 grid gap-10 md:grid-cols-3">
           {testimonios.map((t) => (
-            <div key={t.autor} className="border-t-2 border-accent pt-6">
-              <p className="font-serif text-lg italic leading-relaxed text-ink">
+            <div key={t.autor} className="border-t-2 border-accent-dark/30 pt-6">
+              <p className="font-serif text-lg italic leading-relaxed text-accent-dark">
                 &ldquo;{t.texto}&rdquo;
               </p>
-              <p className="mt-4 text-sm text-ink-soft">{t.autor}</p>
+              <div className="mt-4 flex items-center gap-3">
+                {hasAvatar && (
+                  <img
+                    src="/images/avatar-testimonio.jpg"
+                    alt={t.autor}
+                    className="w-12 h-12 rounded-full object-cover"
+                  />
+                )}
+                <p className="text-sm text-accent-dark/70">{t.autor}</p>
+              </div>
             </div>
           ))}
         </div>

@@ -20,7 +20,7 @@ export default function Hero() {
           <div className="mt-8 flex flex-wrap gap-4">
             <a
               href="#contacto"
-              className="rounded-sm bg-ink px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-accent-dark"
+              className="rounded-sm bg-accent px-6 py-3 text-sm font-medium text-accent-dark transition-opacity hover:opacity-90"
             >
               Pedir consulta online
             </a>
