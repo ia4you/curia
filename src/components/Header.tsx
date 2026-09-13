@@ -30,7 +30,7 @@ export default function Header() {
   return (
     <header className="relative z-50">
       <div className="hidden border-b border-border-soft bg-white md:block">
-        <div className="mx-auto flex max-w-6xl justify-end gap-6 px-6 py-2 text-xs text-ink-soft">
+        <div className="flex justify-end gap-6 px-6 py-2 text-xs text-ink-soft md:px-12 lg:px-20">
           <a
             href="mailto:info@curiaabogados.es"
             className="flex items-center gap-1.5 hover:text-accent"
@@ -46,7 +46,7 @@ export default function Header() {
       </div>
 
       <div className="sticky top-0 z-50 border-b border-border-soft bg-white">
-        <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
+        <div className="flex items-center justify-between px-6 py-4 md:px-12 lg:px-20">
           <Link href="/" className="flex shrink-0 items-center">
             <img src="/images/logo.png" alt="Curia Abogados" className="h-9 w-auto" />
           </Link>
