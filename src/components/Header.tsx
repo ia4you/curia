@@ -3,25 +3,28 @@
 import { useState } from "react";
 import Link from "next/link";
 import { Phone, Mail, MessageCircle, ChevronDown, Menu, X } from "lucide-react";
+import { dropdownSpecialties } from "@/lib/specialties";
 
-const links: { href: string; label: string; submenu?: string[] }[] = [
+type NavLink = {
+  href: string;
+  label: string;
+  submenu?: { href: string; label: string }[];
+};
+
+const links: NavLink[] = [
   { href: "/", label: "Portada" },
-  { href: "#especialidades", label: "Áreas de derecho" },
-  { href: "#fincas", label: "Administradores de fincas" },
+  { href: "/areas-de-derecho", label: "Áreas de derecho" },
+  { href: "/administradores-de-fincas", label: "Administradores de fincas" },
   {
-    href: "#especialidades",
+    href: "/#especialidades",
     label: "Especialidades",
-    submenu: [
-      "Acoso",
-      "Desahucios",
-      "Violencia de género",
-      "Incumplimientos contractuales",
-      "Divorcios",
-      "Accidentes de tráfico",
-    ],
+    submenu: dropdownSpecialties.map((specialty) => ({
+      href: `/${specialty.slug}`,
+      label: specialty.navLabel,
+    })),
   },
-  { href: "#about", label: "Sobre nosotros" },
-  { href: "#contacto", label: "Contacto" },
+  { href: "/#about", label: "Sobre nosotros" },
+  { href: "/#contacto", label: "Contacto" },
 ];
 
 export default function Header() {
@@ -55,39 +58,39 @@ export default function Header() {
             {links.map((link) =>
               link.submenu ? (
                 <div key={link.href} className="group relative">
-                  <a
+                  <Link
                     href={link.href}
                     className="flex items-center gap-1 text-sm text-ink-soft transition-colors hover:text-ink"
                   >
                     {link.label}
                     <ChevronDown className="h-3.5 w-3.5" />
-                  </a>
-                  <div className="invisible absolute left-0 top-full z-50 min-w-[220px] -translate-y-1 border border-border-soft bg-white py-2 opacity-0 shadow-lg transition-all group-hover:visible group-hover:translate-y-0 group-hover:opacity-100">
+                  </Link>
+                  <div className="invisible absolute left-0 top-full z-50 max-h-[70vh] min-w-[240px] -translate-y-1 overflow-y-auto border border-border-soft bg-white py-2 opacity-0 shadow-lg transition-all group-hover:visible group-hover:translate-y-0 group-hover:opacity-100">
                     {link.submenu.map((item) => (
-                      <a
-                        key={item}
-                        href={link.href}
+                      <Link
+                        key={item.href}
+                        href={item.href}
                         className="block px-4 py-2 text-sm text-ink-soft hover:bg-sand hover:text-ink"
                       >
-                        {item}
-                      </a>
+                        {item.label}
+                      </Link>
                     ))}
                   </div>
                 </div>
               ) : (
-                <a
+                <Link
                   key={link.href}
                   href={link.href}
                   className="text-sm text-ink-soft transition-colors hover:text-ink"
                 >
                   {link.label}
-                </a>
+                </Link>
               )
             )}
           </nav>
 
           <a
-            href="#contacto"
+            href="/#contacto"
             className="hidden shrink-0 items-center gap-2 bg-accent px-5 py-2.5 text-xs font-semibold uppercase tracking-wide text-white transition-opacity hover:opacity-90 md:flex"
           >
             <MessageCircle className="h-4 w-4" />
@@ -106,14 +109,29 @@ export default function Header() {
         {open && (
           <nav className="flex flex-col gap-1 border-t border-border-soft px-6 py-4 md:hidden">
             {links.map((link) => (
-              <a
-                key={link.href}
-                href={link.href}
-                className="py-2 text-sm text-ink-soft"
-                onClick={() => setOpen(false)}
-              >
-                {link.label}
-              </a>
+              <div key={link.href}>
+                <Link
+                  href={link.href}
+                  className="block py-2 text-sm text-ink-soft"
+                  onClick={() => setOpen(false)}
+                >
+                  {link.label}
+                </Link>
+                {link.submenu && (
+                  <div className="ml-4 flex flex-col gap-1 border-l border-border-soft pl-3">
+                    {link.submenu.map((item) => (
+                      <Link
+                        key={item.href}
+                        href={item.href}
+                        className="py-1.5 text-sm text-ink-soft"
+                        onClick={() => setOpen(false)}
+                      >
+                        {item.label}
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
             ))}
             <a
               href="mailto:info@curiaabogados.es"
@@ -128,7 +146,7 @@ export default function Header() {
               <Phone className="h-4 w-4" /> 928 248 581
             </a>
             <a
-              href="#contacto"
+              href="/#contacto"
               className="mt-3 inline-block bg-accent px-4 py-2.5 text-center text-sm font-semibold uppercase tracking-wide text-white"
               onClick={() => setOpen(false)}
             >

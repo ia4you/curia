@@ -1,12 +1,13 @@
+import Link from "next/link";
 import { Phone, Mail, MapPin } from "lucide-react";
 
 const areas = [
-  "Acoso",
-  "Desahucios",
-  "Violencia de género",
-  "Incumplimientos contractuales",
-  "Divorcios",
-  "Accidentes de tráfico",
+  { label: "Acoso", href: "/acoso" },
+  { label: "Desahucios", href: "/desahucios" },
+  { label: "Violencia de género", href: "/violencia-de-genero" },
+  { label: "Incumplimientos contractuales", href: "/incumplimientos-contractuales" },
+  { label: "Divorcios", href: "/divorcio" },
+  { label: "Accidentes de tráfico", href: "/accidentes-de-trafico" },
 ];
 
 const enlaces = ["Aviso legal", "Política de privacidad", "Cookies", "Términos y condiciones"];
@@ -64,10 +65,10 @@ export default function Footer() {
             </p>
             <ul className="mt-4 space-y-3 text-sm">
               {areas.map((area) => (
-                <li key={area}>
-                  <a href="#especialidades" className="hover:text-white">
-                    {area}
-                  </a>
+                <li key={area.href}>
+                  <Link href={area.href} className="hover:text-white">
+                    {area.label}
+                  </Link>
                 </li>
               ))}
             </ul>
