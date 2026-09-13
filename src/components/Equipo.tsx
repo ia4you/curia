@@ -21,7 +21,7 @@ const socials = [
 export default function Equipo() {
   return (
     <section id="equipo" className="scroll-mt-20 bg-sand py-20 md:py-28">
-      <div className="mx-auto max-w-7xl px-6 md:px-12 lg:px-20">
+      <div className="mx-auto max-w-[1600px] px-6 md:px-12 lg:px-20">
         <div className="text-center">
           <p className="text-sm font-bold uppercase tracking-widest text-accent">
             Sobre nosotros

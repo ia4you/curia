@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function AboutSection() {
   return (
     <section id="about" className="scroll-mt-20 bg-background py-24 md:py-32">
-      <div className="mx-auto grid max-w-7xl items-center gap-16 px-6 md:grid-cols-2 md:px-12 lg:px-20">
+      <div className="mx-auto grid max-w-[1600px] items-center gap-16 px-6 md:grid-cols-2 md:px-12 lg:px-20">
         <div className="relative mx-auto w-full max-w-sm md:mx-0">
           <div
             aria-hidden="true"

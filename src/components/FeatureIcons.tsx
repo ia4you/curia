@@ -28,7 +28,7 @@ const features = [
 export default function FeatureIcons() {
   return (
     <section className="relative z-10 -mt-16 md:-mt-20">
-      <div className="mx-auto max-w-7xl px-6 md:px-12 lg:px-20">
+      <div className="mx-auto max-w-[1600px] px-6 md:px-12 lg:px-20">
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {features.map((item) => (
             <div
