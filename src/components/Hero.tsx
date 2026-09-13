@@ -2,18 +2,21 @@ import Image from "next/image";
 
 export default function Hero() {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-accent to-accent-dark">
-      <div className="relative h-72 w-full sm:h-96 md:absolute md:inset-y-0 md:right-0 md:h-full md:w-1/2 lg:w-[46%]">
+    <section className="relative overflow-hidden bg-accent">
+      <div
+        className="relative h-72 w-full sm:h-96 md:absolute md:inset-y-0 md:right-0 md:h-full md:w-1/2 lg:w-[46%]"
+        style={{
+          WebkitMaskImage:
+            "linear-gradient(to right, transparent 0%, black 12%, black 100%)",
+          maskImage: "linear-gradient(to right, transparent 0%, black 12%, black 100%)",
+        }}
+      >
         <Image
           src="/images/equipo.png"
           alt="Estefanía Pérez y Saro Morales, abogadas de Curia Abogados"
           fill
           preload
-          className="object-cover object-top saturate-[0.9] contrast-[1.05] md:object-center"
-        />
-        <div
-          aria-hidden="true"
-          className="pointer-events-none absolute inset-y-0 left-0 z-10 w-[18%] bg-gradient-to-r from-accent via-accent/40 to-transparent"
+          className="object-cover object-top md:object-center"
         />
       </div>
 
