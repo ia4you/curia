@@ -1,17 +1,6 @@
 import Image from "next/image";
 import { FacebookIcon, LinkedinIcon, InstagramIcon } from "@/components/icons/SocialIcons";
 
-const equipo = [
-  {
-    nombre: "Estefanía Pérez",
-    objectPosition: "18% 25%",
-  },
-  {
-    nombre: "Saro Morales",
-    objectPosition: "82% 25%",
-  },
-];
-
 const socials = [
   { Icon: FacebookIcon, href: "https://www.facebook.com/Curia-Abogados-104618574853391" },
   { Icon: LinkedinIcon, href: "https://www.linkedin.com/company/74266128/" },
@@ -29,38 +18,34 @@ export default function Equipo() {
           <h2 className="mt-3 font-serif text-3xl text-ink md:text-4xl">Nuestro equipo</h2>
         </div>
 
-        <div className="mx-auto mt-14 grid max-w-2xl gap-8 sm:grid-cols-2">
-          {equipo.map((member) => (
-            <div
-              key={member.nombre}
-              className="relative aspect-[3/4] overflow-hidden bg-white shadow-[0_10px_40px_-15px_rgba(15,43,39,0.25)]"
-            >
-              <Image
-                src="/images/equipo.png"
-                alt={`${member.nombre}, abogada de Curia Abogados`}
-                fill
-                className="object-cover"
-                style={{ objectPosition: member.objectPosition }}
-              />
-              <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-ink/90 via-ink/50 to-transparent px-6 pb-6 pt-20">
-                <h3 className="font-serif text-xl text-white">{member.nombre}</h3>
-                <p className="text-xs uppercase tracking-widest text-white/70">Abogada</p>
-                <div className="mt-3 flex gap-2">
-                  {socials.map(({ Icon, href }) => (
-                    <a
-                      key={href}
-                      href={href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex h-7 w-7 items-center justify-center rounded-full bg-white/15 text-white transition-colors hover:bg-accent"
-                    >
-                      <Icon className="h-3.5 w-3.5" />
-                    </a>
-                  ))}
-                </div>
-              </div>
+        <div className="mx-auto mt-14 max-w-4xl">
+          <div className="relative aspect-[16/10] w-full overflow-hidden shadow-[0_10px_40px_-15px_rgba(15,43,39,0.25)]">
+            <Image
+              src="/images/equipo-consulta.jpg"
+              alt="Estefanía Pérez y Saro Morales, socias fundadoras de Curia Abogados, en consulta con una clienta"
+              fill
+              className="object-cover object-[50%_42%]"
+            />
+          </div>
+
+          <div className="mt-8 text-center">
+            <h3 className="font-serif text-xl text-ink">
+              Estefanía Pérez y Saro Morales — Socias fundadoras
+            </h3>
+            <div className="mt-4 flex justify-center gap-2">
+              {socials.map(({ Icon, href }) => (
+                <a
+                  key={href}
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex h-8 w-8 items-center justify-center rounded-full bg-ink/10 text-ink transition-colors hover:bg-accent hover:text-white"
+                >
+                  <Icon className="h-4 w-4" />
+                </a>
+              ))}
             </div>
-          ))}
+          </div>
         </div>
       </div>
     </section>
