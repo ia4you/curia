@@ -4,19 +4,19 @@ export default function Hero() {
   return (
     <section className="relative overflow-hidden bg-accent">
       <div
-        className="relative h-72 w-full sm:h-96 md:absolute md:inset-y-0 md:right-0 md:h-full md:w-1/2 lg:w-[46%]"
+        className="relative h-72 w-full sm:h-96 md:absolute md:inset-y-0 md:right-0 md:h-full md:w-1/2 lg:w-[55%]"
         style={{
           WebkitMaskImage:
-            "linear-gradient(to right, transparent 0%, black 12%, black 100%)",
-          maskImage: "linear-gradient(to right, transparent 0%, black 12%, black 100%)",
+            "linear-gradient(to right, transparent 0%, black 6%, black 100%)",
+          maskImage: "linear-gradient(to right, transparent 0%, black 6%, black 100%)",
         }}
       >
         <Image
-          src="/images/equipo.png"
-          alt="Estefanía Pérez y Saro Morales, abogadas de Curia Abogados"
+          src="/images/hero-oficina.jpeg"
+          alt="Estefanía Pérez y Saro Morales en el despacho de Curia Abogados"
           fill
           preload
-          className="object-cover object-top md:object-center"
+          className="object-cover object-[65%_30%]"
         />
       </div>
 
