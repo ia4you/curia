@@ -1,10 +1,12 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
-import ProcedimientosCards from "@/components/ProcedimientosCards";
-import QuienesSomos from "@/components/QuienesSomos";
+import FeatureIcons from "@/components/FeatureIcons";
+import AboutSection from "@/components/AboutSection";
+import StatsBar from "@/components/StatsBar";
 import Especialidades from "@/components/Especialidades";
-import Testimonios from "@/components/Testimonios";
+import Equipo from "@/components/Equipo";
 import CtaBand from "@/components/CtaBand";
+import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 
 export default function Home() {
@@ -12,11 +14,13 @@ export default function Home() {
     <main>
       <Header />
       <Hero />
-      <ProcedimientosCards />
-      <QuienesSomos />
+      <FeatureIcons />
+      <AboutSection />
+      <StatsBar />
       <Especialidades />
-      <Testimonios />
+      <Equipo />
       <CtaBand />
+      <ContactSection />
       <Footer />
     </main>
   );
