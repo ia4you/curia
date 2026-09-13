@@ -16,6 +16,9 @@ export default function Equipo() {
             Sobre nosotros
           </p>
           <h2 className="mt-3 font-serif text-3xl text-ink md:text-4xl">Nuestro equipo</h2>
+          <p className="mx-auto mt-4 max-w-xl text-ink-soft">
+            Estefanía Pérez y Saro Morales, socias fundadoras de Curia Abogados.
+          </p>
         </div>
 
         <div className="mx-auto mt-14 max-w-4xl">
@@ -30,7 +33,7 @@ export default function Equipo() {
 
           <div className="mt-8 text-center">
             <h3 className="font-serif text-xl text-ink">
-              Estefanía Pérez y Saro Morales — Socias fundadoras
+              Atención cercana y personalizada en cada consulta
             </h3>
             <div className="mt-4 flex justify-center gap-2">
               {socials.map(({ Icon, href }) => (

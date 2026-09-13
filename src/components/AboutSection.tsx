@@ -13,7 +13,7 @@ export default function AboutSection() {
               backgroundSize: "14px 14px",
             }}
           />
-          <div className="relative aspect-[4/5] w-full overflow-hidden">
+          <div className="relative aspect-[4/3] w-full overflow-hidden">
             <Image
               src="/images/equipo-oficina.jpg"
               alt="Estefanía Pérez y Saro Morales, socias fundadoras de Curia Abogados, en su despacho"
