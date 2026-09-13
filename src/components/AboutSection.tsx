@@ -13,20 +13,12 @@ export default function AboutSection() {
               backgroundSize: "14px 14px",
             }}
           />
-          <div className="relative aspect-[4/5] w-full overflow-hidden bg-sand">
+          <div className="relative aspect-[4/5] w-full overflow-hidden">
             <Image
-              src="/images/equipo.png"
-              alt="Estefanía Pérez y Saro Morales, socias fundadoras de Curia Abogados"
+              src="/images/equipo-oficina.jpg"
+              alt="Estefanía Pérez y Saro Morales, socias fundadoras de Curia Abogados, en su despacho"
               fill
-              className="object-contain object-bottom"
-            />
-          </div>
-          <div className="absolute -bottom-10 -right-6 h-36 w-32 overflow-hidden border-4 border-white shadow-xl sm:-right-10 sm:h-44 sm:w-40">
-            <Image
-              src="/images/hero-socias.jpg"
-              alt="Estefanía Pérez y Saro Morales trabajando en su despacho"
-              fill
-              className="object-cover"
+              className="object-cover object-[55%_center]"
             />
           </div>
         </div>
