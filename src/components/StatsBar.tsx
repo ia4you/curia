@@ -10,7 +10,7 @@ const stats = [
 export default function StatsBar() {
   return (
     <section className="bg-sand py-16 md:py-20">
-      <div className="mx-auto max-w-6xl px-6">
+      <div className="mx-auto max-w-7xl px-6 md:px-12 lg:px-20">
         <div className="grid grid-cols-2 gap-10 bg-white px-8 py-12 shadow-[0_10px_40px_-15px_rgba(15,43,39,0.15)] sm:px-12 md:grid-cols-4">
           {stats.map((stat) => (
             <div key={stat.etiqueta} className="text-center">

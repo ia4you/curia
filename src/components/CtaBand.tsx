@@ -1,7 +1,7 @@
 export default function CtaBand() {
   return (
     <section className="bg-sand py-16 md:py-20">
-      <div className="mx-auto max-w-6xl px-6">
+      <div className="mx-auto max-w-7xl px-6 md:px-12 lg:px-20">
         <div className="flex flex-col items-start justify-between gap-8 bg-ink px-8 py-12 md:flex-row md:items-center md:px-12">
           <div>
             <h2 className="font-serif text-3xl uppercase text-white md:text-4xl">

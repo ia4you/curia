@@ -14,7 +14,7 @@ const enlaces = ["Aviso legal", "Política de privacidad", "Cookies", "Términos
 export default function Footer() {
   return (
     <footer className="bg-ink text-white/80">
-      <div className="mx-auto max-w-6xl px-6 py-16">
+      <div className="mx-auto max-w-7xl px-6 py-16 md:px-12 lg:px-20">
         <div className="grid gap-12 sm:grid-cols-2 lg:grid-cols-4">
           <div>
             <img

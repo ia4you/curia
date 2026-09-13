@@ -40,7 +40,7 @@ const especialidades = [
 export default function Especialidades() {
   return (
     <section id="especialidades" className="scroll-mt-20 bg-background py-20 md:py-28">
-      <div className="mx-auto max-w-6xl px-6">
+      <div className="mx-auto max-w-7xl px-6 md:px-12 lg:px-20">
         <div className="text-center">
           <p className="text-sm font-bold uppercase tracking-widest text-accent">
             Especialidades
