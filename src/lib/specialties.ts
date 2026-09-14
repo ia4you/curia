@@ -26,6 +26,11 @@ import {
   AlertCircle,
   Car,
   Stethoscope,
+  Calculator,
+  Receipt,
+  FileSpreadsheet,
+  Wrench,
+  KeyRound,
 } from "lucide-react";
 
 export type Subtopic = {
@@ -445,33 +450,12 @@ export const specialties: Record<string, SpecialtyContent> = {
   "administradores-de-fincas": {
     slug: "administradores-de-fincas",
     navLabel: "Administradores de Fincas",
-    title: "Administradores de Fincas en Las Palmas de Gran Canaria",
+    title: "Administradores de fincas",
     metaTitle: "Administradores de Fincas en Las Palmas de Gran Canaria | Curia Abogados",
     metaDescription:
-      "Gestión profesional de comunidades de propietarios en Las Palmas de Gran Canaria: cuentas, morosidad, juntas y asesoramiento legal en un mismo despacho.",
+      "Gestión integral de comunidades de propietarios en Las Palmas de Gran Canaria: contabilidad, cuotas, morosidad y asesoría jurídica en un solo despacho.",
     intro: [
-      "Gestionar una comunidad de propietarios implica mucho más que cobrar las cuotas: hay cuentas que llevar, proveedores que coordinar, juntas que convocar y, en ocasiones, conflictos entre vecinos que resolver. Contar con un **administrador de fincas profesional** ayuda a que todo funcione con orden y transparencia.",
-      "En Curia Abogados ofrecemos un servicio de administración de fincas en Las Palmas de Gran Canaria con la ventaja añadida de contar con respaldo jurídico propio para cualquier incidencia legal que surja en la comunidad.",
-    ],
-    sectionTitle: "Qué incluye nuestra gestión",
-    subtopics: [
-      {
-        title: "Gestión económica",
-        text: "Llevanza de cuentas, cobro de cuotas y **gestión de la morosidad** de la comunidad.",
-      },
-      {
-        title: "Gestión administrativa",
-        text: "Convocatoria de juntas, custodia de documentación y coordinación de proveedores y personal de la comunidad.",
-      },
-      {
-        title: "Asesoramiento legal",
-        text: "Al formar parte de un despacho de abogados, cualquier conflicto vecinal o incidencia legal se gestiona **sin necesidad de acudir a un tercero**.",
-      },
-    ],
-    processParagraphs: [
-      "Cada comunidad tiene sus propias particularidades: número de vecinos, estado del edificio, servicios contratados. Por eso, antes de asumir la gestión, dedicamos tiempo a **entender cómo funciona tu comunidad** y qué necesita para funcionar mejor.",
-      "El día a día de una comunidad puede generar situaciones muy distintas, desde una incidencia técnica urgente hasta un vecino que no paga sus cuotas. Nuestro trabajo es anticiparnos a esos problemas y resolverlos con agilidad.",
-      "Al final, nuestro objetivo es que la comunidad funcione con la máxima transparencia y que los propietarios puedan despreocuparse de la gestión del día a día.",
+      "Gestionar una comunidad de propietarios implica mucho más que cobrar cuotas: contabilidad, obligaciones fiscales, mantenimiento, juntas de vecinos y, en ocasiones, conflictos que requieren respaldo legal. Como despacho de abogados, en Curia Abogados unimos la administración de fincas con la asesoría jurídica, para que tu comunidad esté en manos de un único equipo que conoce tanto la gestión diaria como la ley que la regula.",
     ],
     advantagesTitle: "VENTAJAS DE CONTAR CON CURIA ABOGADOS PARA TU COMUNIDAD",
     advantages: [
@@ -479,6 +463,48 @@ export const specialties: Record<string, SpecialtyContent> = {
       "Respaldo legal propio para cualquier conflicto vecinal o incidencia.",
       "Gestión ágil de la morosidad dentro del propio despacho.",
       "Un único equipo de confianza para toda la gestión de tu comunidad.",
+    ],
+    cardSections: [
+      {
+        icon: Calculator,
+        title: "Contabilidad y cuentas",
+        text: "Llevanza de libros contables, gestión de cuentas bancarias y control de ingresos y gastos de la comunidad.",
+      },
+      {
+        icon: Receipt,
+        title: "Cuotas y morosidad",
+        text: "Cobro de cuotas y gestión de impagos, iniciando si es necesario los procedimientos judiciales oportunos desde el propio despacho.",
+      },
+      {
+        icon: FileSpreadsheet,
+        title: "Obligaciones fiscales",
+        text: "Nos encargamos de que tu comunidad cumpla con todas sus obligaciones fiscales en tiempo y forma.",
+      },
+      {
+        icon: Wrench,
+        title: "Personal y servicios",
+        text: "Búsqueda de personal cualificado y gestión de los servicios que necesite el edificio, incluidas las urgencias.",
+      },
+      {
+        icon: Users,
+        title: "Juntas de propietarios",
+        text: "Convocamos y organizamos las juntas ordinarias y extraordinarias, buscando la máxima participación vecinal.",
+      },
+      {
+        icon: KeyRound,
+        title: "Gestión documental y llaves",
+        text: "Custodia de llaves de la comunidad y gestión de toda la documentación administrativa.",
+      },
+      {
+        icon: Scale,
+        title: "Asesoría jurídica integrada",
+        text: "Al ser un despacho de abogados, resolvemos con respaldo legal cualquier incidencia o conflicto que surja en la comunidad.",
+      },
+      {
+        icon: HeartHandshake,
+        title: "Mediación de conflictos vecinales",
+        text: "Te ayudamos a solucionar y mediar en los conflictos entre vecinos, manteniendo el buen funcionamiento de la comunidad.",
+      },
     ],
   },
 
