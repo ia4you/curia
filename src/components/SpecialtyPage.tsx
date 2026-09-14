@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { CheckCircle2, Scale } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -15,15 +16,28 @@ export default function SpecialtyPage({ data }: { data: SpecialtyContent }) {
       {data.cardSections ? (
         <article className="bg-background py-16 md:py-20">
           <div className="mx-auto max-w-[1600px] px-6 md:px-12 lg:px-20">
-            <div className="mx-auto max-w-3xl">
-              {data.intro.map((paragraph, i) => (
-                <p key={i} className="mb-5 leading-relaxed text-ink-soft">
-                  {renderBold(paragraph)}
-                </p>
-              ))}
+            <div className="grid grid-cols-1 items-center gap-10 md:grid-cols-2">
+              <div className="relative aspect-[4/3] w-full overflow-hidden rounded-lg">
+                <Image
+                  src={data.introImage ?? "/images/equipo-consulta.jpg"}
+                  alt={
+                    data.introImageAlt ??
+                    "Abogada de Curia Abogados en consulta cercana con una clienta"
+                  }
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <div>
+                {data.intro.map((paragraph, i) => (
+                  <p key={i} className="mb-5 text-lg leading-relaxed text-ink-soft last:mb-0">
+                    {renderBold(paragraph)}
+                  </p>
+                ))}
+              </div>
             </div>
 
-            <div className="mt-10 grid grid-cols-1 gap-6 md:grid-cols-2">
+            <div className="mt-14 grid grid-cols-1 gap-6 md:grid-cols-2">
               {data.cardSections.map((card) => (
                 <div
                   key={card.title}

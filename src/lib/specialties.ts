@@ -28,6 +28,10 @@ export type SpecialtyContent = {
   /** Optional short-card layout (icon + title + text) used instead of the
    * long-form sectionTitle/subtopics/processParagraphs blocks when present. */
   cardSections?: CardSection[];
+  /** Image shown next to the intro paragraph on cardSections pages.
+   * Defaults to equipo-consulta.jpg when not set. */
+  introImage?: string;
+  introImageAlt?: string;
 };
 
 export const specialties: Record<string, SpecialtyContent> = {
