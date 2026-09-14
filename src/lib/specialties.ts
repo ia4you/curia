@@ -1,5 +1,32 @@
 import type { LucideIcon } from "lucide-react";
-import { Handshake, Scale, Users, Home, FileText, HeartHandshake, ShieldCheck } from "lucide-react";
+import {
+  Handshake,
+  Scale,
+  Users,
+  Home,
+  FileText,
+  HeartHandshake,
+  ShieldCheck,
+  User,
+  UsersRound,
+  Calendar,
+  FileWarning,
+  FileCheck,
+  Building2,
+  Clock,
+  AlertTriangle,
+  Search,
+  Shield,
+  Landmark,
+  ClipboardCheck,
+  UserX,
+  Laptop,
+  ShoppingBag,
+  CreditCard,
+  AlertCircle,
+  Car,
+  Stethoscope,
+} from "lucide-react";
 
 export type Subtopic = {
   title: string;
@@ -94,33 +121,12 @@ export const specialties: Record<string, SpecialtyContent> = {
   "guarda-y-custodia": {
     slug: "guarda-y-custodia",
     navLabel: "Guarda y Custodia",
-    title: "Guarda y Custodia en Las Palmas de Gran Canaria",
-    metaTitle: "Guarda y Custodia en Las Palmas de Gran Canaria | Curia Abogados",
+    title: "Abogados especializados en guarda y custodia",
+    metaTitle: "Abogados de Guarda y Custodia en Las Palmas de Gran Canaria | Curia Abogados",
     metaDescription:
-      "Asesoramiento legal en procesos de guarda y custodia de menores en Las Palmas de Gran Canaria. Te ayudamos a proteger el bienestar de tus hijos en cada etapa.",
+      "Asesoramiento legal en custodia de hijos: individual, compartida o distribuida. Más de 15 años ayudando a familias en Las Palmas de Gran Canaria.",
     intro: [
-      "Decidir cómo se organizará el cuidado de los hijos tras una separación es, casi siempre, la parte más delicada del proceso. Una **abogada especializada en guarda y custodia** puede ayudarte a plantear una propuesta realista y a defenderla si no hay acuerdo con la otra parte.",
-      "En Curia Abogados trabajamos para que la solución final tenga siempre presente el bienestar de los menores, buscando acuerdos estables y, cuando es necesario, defendiendo tu posición ante el juzgado en Las Palmas de Gran Canaria.",
-    ],
-    sectionTitle: "Modalidades de custodia",
-    subtopics: [
-      {
-        title: "Custodia individual",
-        text: "Uno de los progenitores asume el día a día de los hijos, mientras que el otro mantiene un **régimen de visitas y comunicación** regular.",
-      },
-      {
-        title: "Custodia compartida",
-        text: "Ambos progenitores se turnan el cuidado de los hijos en periodos alternos y participan de forma **igualitaria en las decisiones** que les afectan.",
-      },
-      {
-        title: "Custodia atribuida a un tercero",
-        text: "En circunstancias excepcionales, cuando ninguno de los progenitores puede garantizar el bienestar del menor, la custodia puede recaer en un familiar cercano u otra figura designada por el juzgado.",
-      },
-    ],
-    processParagraphs: [
-      "No existe una fórmula única: lo que funciona para una familia puede no ser lo más adecuado para otra. Por eso, antes de proponer un modelo de custodia, es importante analizar la rutina de los menores, la disponibilidad de cada progenitor y la relación entre ambos.",
-      "Cuando hay acuerdo, el proceso suele ser más ágil. Cuando no lo hay, **el respaldo de un abogado con experiencia en derecho de familia** resulta clave para presentar tu propuesta de la manera más sólida posible ante el juzgado.",
-      "Te acompañamos en cada paso, desde la primera conversación hasta la resolución final, cuidando que el proceso sea lo menos traumático posible para ti y para tus hijos.",
+      "La custodia de los hijos es una de las decisiones más importantes tras la ruptura de una pareja. Cuando hay acuerdo entre ambos progenitores, el proceso suele ser sencillo; cuando no lo hay, es el juez quien debe decidir qué régimen protege mejor el bienestar de los menores. Contar con un abogado especializado en derecho de familia te ayuda a entender qué opciones existen y a defender tu relación con tus hijos durante todo el proceso.",
     ],
     advantagesTitle: "VENTAJAS DE CONTAR CON UN ABOGADO PARA LA CUSTODIA DE TUS HIJOS",
     advantages: [
@@ -129,38 +135,54 @@ export const specialties: Record<string, SpecialtyContent> = {
       "Representación ante el juzgado si no hay acuerdo con la otra parte.",
       "Un acompañamiento centrado en minimizar el impacto emocional en los menores.",
     ],
+    cardSections: [
+      {
+        icon: User,
+        title: "Custodia individual",
+        text: "Uno de los progenitores convive con los hijos y se encarga del día a día, manteniendo el otro un régimen de visitas y comunicación.",
+      },
+      {
+        icon: Users,
+        title: "Custodia compartida",
+        text: "Ambos progenitores se alternan periodos de convivencia con los hijos y comparten las decisiones sobre su cuidado.",
+      },
+      {
+        icon: UsersRound,
+        title: "Custodia distribuida",
+        text: "Cuando hay varios hijos, en casos justificados el juez puede repartir la convivencia entre ambos progenitores, cuidando siempre no separar a los hermanos.",
+      },
+      {
+        icon: ShieldCheck,
+        title: "Custodia a cargo de terceros",
+        text: "En situaciones excepcionales, la custodia puede atribuirse a un familiar cercano cuando el bienestar del menor lo requiere.",
+      },
+      {
+        icon: Calendar,
+        title: "Régimen de visitas",
+        text: "Te asesoramos para establecer un régimen de visitas claro que proteja el vínculo con tus hijos.",
+      },
+      {
+        icon: HeartHandshake,
+        title: "Acompañamiento legal",
+        text: "Te guiamos en cada paso, desde el convenio regulador hasta la representación ante el juzgado si es necesario.",
+      },
+      {
+        icon: Scale,
+        title: "Defensa de tus derechos",
+        text: "Conocemos el derecho de familia y sabemos cómo presentar tu caso para proteger tu relación con tus hijos.",
+      },
+    ],
   },
 
   despidos: {
     slug: "despidos",
     navLabel: "Despidos",
-    title: "Despidos en Las Palmas de Gran Canaria",
-    metaTitle: "Abogado de Despidos en Las Palmas de Gran Canaria | Curia Abogados",
+    title: "Abogados especializados en despidos",
+    metaTitle: "Abogados Laboralistas: Despidos en Las Palmas de Gran Canaria | Curia Abogados",
     metaDescription:
-      "Te asesoramos si has sido despedido en Las Palmas de Gran Canaria. Revisamos tu caso y te acompañamos para defender tus derechos como trabajador afectado.",
+      "Asesoramiento legal ante despidos disciplinarios, objetivos o colectivos. Defendemos tus derechos como trabajador en Las Palmas de Gran Canaria.",
     intro: [
-      "Recibir una carta de despido genera muchas dudas: si es justificado, si la indemnización es correcta o si merece la pena impugnarlo. Un **abogado especializado en despidos** puede revisar tu situación y decirte con claridad qué opciones tienes.",
-      "Desde Curia Abogados ayudamos a trabajadores en Las Palmas de Gran Canaria a entender su situación laboral y a actuar dentro de los plazos adecuados, ya sea para negociar una salida más favorable o para impugnar un despido que consideras injusto.",
-    ],
-    sectionTitle: "Tipos de despido",
-    subtopics: [
-      {
-        title: "Despido disciplinario",
-        text: "La empresa alega un incumplimiento grave por parte del trabajador. Es importante revisar si los motivos alegados están **bien fundamentados y documentados**.",
-      },
-      {
-        title: "Despido por causas objetivas",
-        text: "Se produce por motivos organizativos, técnicos o económicos de la empresa. Suele conllevar un preaviso y una indemnización, cuyo cálculo conviene **revisar cuidadosamente**.",
-      },
-      {
-        title: "Despido colectivo",
-        text: "Afecta a varios trabajadores a la vez dentro de un proceso regulado que la empresa debe seguir con especial cuidado en cuanto a plazos y procedimiento.",
-      },
-    ],
-    processParagraphs: [
-      "Si te encuentras ante un despido, lo primero es no firmar nada a la ligera: puedes solicitar una copia de la carta y, si no estás de acuerdo, dejar constancia de ello antes de firmar. **Guardar toda la documentación de tu relación laboral** te ayudará a que podamos valorar tu caso con la mayor información posible.",
-      "El plazo para actuar tras un despido es limitado, así que cuanto antes recibas asesoramiento, más opciones tendrás disponibles. El proceso puede variar según el tipo de despido y las circunstancias de tu empresa, por lo que cada caso requiere un análisis propio.",
-      "Nuestro objetivo es que entiendas tu situación con claridad y que, si decides impugnar el despido, cuentes con una defensa sólida desde el primer momento.",
+      "Sufrir un despido no es fácil, y no todos son justificados. Conocer el tipo de despido que has recibido y actuar dentro de los plazos legales es clave para defender tus derechos. En Curia Abogados te ayudamos a entender tu situación y a decidir los siguientes pasos con seguridad.",
     ],
     advantagesTitle: "VENTAJAS DE CONTAR CON UN ABOGADO PARA TU DESPIDO",
     advantages: [
@@ -169,34 +191,54 @@ export const specialties: Record<string, SpecialtyContent> = {
       "Negociación con la empresa cuando existe margen para un acuerdo.",
       "Representación en la vía judicial si es necesario.",
     ],
+    cardSections: [
+      {
+        icon: FileWarning,
+        title: "Despido disciplinario",
+        text: "Se produce cuando la empresa alega un incumplimiento grave por parte del trabajador. Es importante revisar si está bien justificado.",
+      },
+      {
+        icon: Building2,
+        title: "Despido objetivo",
+        text: "Motivado por causas económicas, técnicas o de organización de la empresa, con derecho a preaviso o indemnización según el caso.",
+      },
+      {
+        icon: Users,
+        title: "Despido colectivo (ERE)",
+        text: "Afecta a varios trabajadores de la empresa y sigue un procedimiento específico que conviene revisar con detalle.",
+      },
+      {
+        icon: FileCheck,
+        title: "Revisión del finiquito",
+        text: "Comprobamos que la indemnización y el finiquito recibidos correspondan realmente a lo que te corresponde.",
+      },
+      {
+        icon: Clock,
+        title: "Plazos para reclamar",
+        text: "Los plazos para impugnar un despido son limitados. Te ayudamos a actuar a tiempo, sin firmar nada de forma precipitada.",
+      },
+      {
+        icon: Handshake,
+        title: "Representación ante el SMAC",
+        text: "Te acompañamos en el proceso de mediación y conciliación previo a la vía judicial.",
+      },
+      {
+        icon: Scale,
+        title: "Defensa de tus derechos laborales",
+        text: "Analizamos tu caso y te representamos para conseguir el mejor resultado posible.",
+      },
+    ],
   },
 
   "robos-o-hurtos": {
     slug: "robos-o-hurtos",
     navLabel: "Robos o Hurtos",
-    title: "Robos y Hurtos en Las Palmas de Gran Canaria",
-    metaTitle: "Abogado de Robos y Hurtos en Las Palmas de Gran Canaria | Curia Abogados",
+    title: "Abogados especializados en robos y hurtos",
+    metaTitle: "Abogados Penalistas: Robos y Hurtos en Las Palmas de Gran Canaria | Curia Abogados",
     metaDescription:
-      "Defensa y asesoramiento legal en casos de robos y hurtos en Las Palmas de Gran Canaria, tanto si eres víctima como si necesitas representación penal experta.",
+      "Defensa legal en casos de robo y hurto. Te orientamos sobre tus derechos como víctima o acusado en Las Palmas de Gran Canaria.",
     intro: [
-      "Ser víctima de un robo o un hurto genera inseguridad, además de las gestiones legales que hay que afrontar después. Un **abogado especializado en delitos contra el patrimonio** puede ayudarte a presentar la denuncia correctamente y a defender tus intereses a lo largo del proceso.",
-      "En Curia Abogados atendemos casos de robo y hurto en Las Palmas de Gran Canaria, tanto para víctimas que buscan que se reconozcan sus derechos, como para personas que necesitan una defensa penal sólida.",
-    ],
-    sectionTitle: "Diferencias entre robo y hurto",
-    subtopics: [
-      {
-        title: "Robo",
-        text: "Implica el uso de **fuerza en las cosas o violencia e intimidación** sobre las personas para apoderarse de un bien ajeno.",
-      },
-      {
-        title: "Hurto",
-        text: "Se produce el apoderamiento de un bien ajeno **sin necesidad de fuerza ni violencia**, lo que a efectos legales lo diferencia claramente del robo.",
-      },
-    ],
-    processParagraphs: [
-      "Si has sido víctima de un robo o hurto, es recomendable denunciar cuanto antes y **recopilar cualquier prueba disponible**: testigos, grabaciones, objetos afectados o cualquier documento que acredite la propiedad de lo sustraído.",
-      "El proceso puede variar según la gravedad de los hechos y las circunstancias del caso, por lo que es importante contar con asesoramiento desde el principio para saber qué esperar en cada fase, ya sea como víctima o como persona investigada.",
-      "Nuestro equipo te acompaña tanto en la fase de denuncia como durante todo el procedimiento penal, cuidando que tus derechos queden protegidos en todo momento.",
+      "Robo y hurto no son lo mismo ante la ley: la diferencia está en si hubo fuerza o intimidación. Sea cual sea tu situación, contar con asesoramiento legal desde el primer momento es clave para proteger tus derechos, tanto si has sido víctima como si te enfrentas a una acusación.",
     ],
     advantagesTitle: "VENTAJAS DE CONTAR CON UN ABOGADO EN CASOS DE ROBO O HURTO",
     advantages: [
@@ -205,38 +247,54 @@ export const specialties: Record<string, SpecialtyContent> = {
       "Representación como acusación particular o como defensa, según tu situación.",
       "Acompañamiento durante todo el procedimiento penal.",
     ],
+    cardSections: [
+      {
+        icon: AlertTriangle,
+        title: "Qué es un robo",
+        text: "Implica el uso de fuerza o intimidación para apoderarse de algo ajeno. Las consecuencias legales dependen de las circunstancias de cada caso.",
+      },
+      {
+        icon: Search,
+        title: "Qué es un hurto",
+        text: "A diferencia del robo, no implica fuerza ni intimidación, aunque sigue siendo un delito contra la propiedad.",
+      },
+      {
+        icon: FileText,
+        title: "Si has sido víctima",
+        text: "Te ayudamos a interponer la denuncia correctamente y a reunir las pruebas necesarias para tu caso.",
+      },
+      {
+        icon: Shield,
+        title: "Si te enfrentas a una acusación",
+        text: "Analizamos tu situación y preparamos tu defensa desde el primer momento.",
+      },
+      {
+        icon: Landmark,
+        title: "Asistencia en comisaría y juzgado",
+        text: "Te acompañamos en cada trámite, desde la denuncia hasta el juicio si llega a producirse.",
+      },
+      {
+        icon: ClipboardCheck,
+        title: "Valoración de pruebas",
+        text: "Revisamos qué pruebas son relevantes y cómo presentarlas de forma efectiva ante el juez.",
+      },
+      {
+        icon: Scale,
+        title: "Defensa de tus intereses",
+        text: "Ya seas víctima o parte acusada, velamos por que se respeten tus derechos en todo el proceso.",
+      },
+    ],
   },
 
   estafas: {
     slug: "estafas",
     navLabel: "Estafas",
-    title: "Estafas en Las Palmas de Gran Canaria",
-    metaTitle: "Abogado de Estafas en Las Palmas de Gran Canaria | Curia Abogados",
+    title: "Abogados especializados en estafas",
+    metaTitle: "Abogados Penalistas: Estafas en Las Palmas de Gran Canaria | Curia Abogados",
     metaDescription:
-      "Asesoramiento legal si has sido víctima de una estafa en Las Palmas de Gran Canaria. Te ayudamos a reunir pruebas y a defender tus derechos ante la justicia.",
+      "Asesoramiento legal en casos de estafa y apropiación indebida. Te ayudamos a defender tus derechos en Las Palmas de Gran Canaria.",
     intro: [
-      "Una estafa se produce cuando alguien utiliza el engaño para conseguir que otra persona actúe en su propio perjuicio, normalmente de tipo económico. Puede darse en una compraventa, en una transferencia o a través de internet. Un **abogado especializado en estafas** puede ayudarte a valorar si lo ocurrido tiene encaje penal y cómo proceder.",
-      "En Curia Abogados asesoramos a personas y empresas en Las Palmas de Gran Canaria que han sido víctimas de una estafa, ayudándoles a reunir la documentación necesaria y a defender sus intereses ante la justicia.",
-    ],
-    sectionTitle: "Formas habituales de estafa",
-    subtopics: [
-      {
-        title: "Estafas comerciales",
-        text: "Se producen en el marco de una compraventa o relación comercial, cuando una de las partes **engaña deliberadamente a la otra** sobre el producto, servicio o condiciones acordadas.",
-      },
-      {
-        title: "Estafas informáticas",
-        text: "Cada vez más frecuentes, se aprovechan de plataformas digitales y medios de pago electrónicos para realizar operaciones **sin el consentimiento real del afectado**.",
-      },
-      {
-        title: "Estafas con medios de pago",
-        text: "Consisten en el uso indebido de tarjetas u otros instrumentos de pago de una persona sin su autorización.",
-      },
-    ],
-    processParagraphs: [
-      "Si crees que has sido víctima de una estafa, lo primero es **conservar toda la documentación** relacionada: mensajes, correos, justificantes de pago o cualquier comunicación con la otra parte. Cuanta más información aportes, más fácil será valorar tu caso.",
-      "El proceso puede variar mucho según el tipo de estafa y las circunstancias en las que se produjo, por lo que es recomendable contar con asesoramiento desde el principio antes de dar cualquier paso legal.",
-      "Nuestro equipo te ayuda a entender si tu caso tiene recorrido legal y te acompaña en todo el proceso, ya sea presentando la denuncia o representándote si el caso llega a juicio.",
+      "Una estafa se produce cuando alguien te engaña para que actúes en tu propio perjuicio o el de un tercero. Es uno de los delitos más habituales, y puede presentarse de muchas formas: desde un engaño tradicional hasta un fraude informático o comercial. En Curia Abogados te ayudamos a entender tu situación y a actuar con seguridad.",
     ],
     advantagesTitle: "VENTAJAS DE CONTAR CON UN ABOGADO SI HAS SUFRIDO UNA ESTAFA",
     advantages: [
@@ -245,34 +303,54 @@ export const specialties: Record<string, SpecialtyContent> = {
       "Representación como acusación particular durante el procedimiento.",
       "Acompañamiento cercano durante todo el proceso.",
     ],
+    cardSections: [
+      {
+        icon: UserX,
+        title: "Estafas comunes",
+        text: "Basadas en el engaño directo para conseguir que la víctima actúe en su propio perjuicio.",
+      },
+      {
+        icon: Laptop,
+        title: "Estafas informáticas",
+        text: "Cada vez más frecuentes, implican el uso de medios digitales para acceder a fondos sin consentimiento.",
+      },
+      {
+        icon: ShoppingBag,
+        title: "Estafas comerciales",
+        text: "Se dan cuando un vendedor engaña sobre las características reales de un producto o servicio.",
+      },
+      {
+        icon: CreditCard,
+        title: "Estafas con medios de pago",
+        text: "El uso indebido de tarjetas u otros medios de pago ajenos también constituye una estafa.",
+      },
+      {
+        icon: FileText,
+        title: "Cómo actuar si has sido estafado",
+        text: "Te ayudamos a reunir pruebas y a interponer la denuncia correspondiente cuanto antes.",
+      },
+      {
+        icon: Search,
+        title: "Valoración de tu caso",
+        text: "Cada estafa es distinta; analizamos las circunstancias concretas de la tuya para orientarte correctamente.",
+      },
+      {
+        icon: Scale,
+        title: "Defensa de tus derechos",
+        text: "Te representamos para intentar recuperar lo perdido y que el responsable asuma sus consecuencias legales.",
+      },
+    ],
   },
 
   lesiones: {
     slug: "lesiones",
     navLabel: "Lesiones",
-    title: "Lesiones en Las Palmas de Gran Canaria",
-    metaTitle: "Abogado de Lesiones en Las Palmas de Gran Canaria | Curia Abogados",
+    title: "Abogados especializados en lesiones",
+    metaTitle: "Abogados en Casos de Lesiones en Las Palmas de Gran Canaria | Curia Abogados",
     metaDescription:
-      "Defendemos tus derechos si has sufrido lesiones por negligencia o agresión en Las Palmas de Gran Canaria. Asesoramiento legal cercano, profesional y humano.",
+      "Defendemos tus derechos si has sufrido lesiones por acción de un tercero. Asesoramiento legal en Las Palmas de Gran Canaria.",
     intro: [
-      "Cuando una persona sufre un daño físico por la acción o negligencia de otra, es importante contar con asesoramiento para entender qué opciones legales existen y cómo defender tus derechos. Un **abogado especializado en lesiones** puede ayudarte a valorar tu situación desde el primer momento.",
-      "En Curia Abogados acompañamos a víctimas de lesiones en Las Palmas de Gran Canaria, ya sea por accidentes, agresiones o negligencias, ayudándoles a reunir la documentación necesaria y a defender sus intereses.",
-    ],
-    sectionTitle: "Aspectos a tener en cuenta",
-    subtopics: [
-      {
-        title: "Lesiones por negligencia",
-        text: "Se producen cuando el daño es consecuencia de una **falta de cuidado o diligencia** por parte de un tercero, sin que exista intención de causar el daño.",
-      },
-      {
-        title: "Lesiones intencionadas",
-        text: "Se producen cuando el daño es causado de forma **deliberada** por otra persona, lo que suele conllevar una respuesta penal más severa.",
-      },
-    ],
-    processParagraphs: [
-      "Si has sufrido una lesión, es importante que acudas cuanto antes a un servicio médico para que quede constancia del daño sufrido, y que **conserves todos los informes y partes médicos** relacionados con tu recuperación.",
-      "El proceso puede variar según el origen de la lesión y su gravedad, por lo que cada caso requiere un análisis individual antes de decidir cómo proceder legalmente.",
-      "Nuestro trabajo es ayudarte a entender tus opciones y a defender tu posición, ya sea negociando con la otra parte o representándote ante el juzgado si es necesario.",
+      "Sufrir una lesión causada por otra persona, ya sea de forma intencionada o por imprudencia, afecta tu salud y tu día a día. La ley protege tu derecho a la integridad física, y contar con asesoramiento legal te ayuda a que el responsable asuma las consecuencias y a que recibas la compensación que te corresponde.",
     ],
     advantagesTitle: "VENTAJAS DE CONTAR CON UN ABOGADO SI HAS SUFRIDO LESIONES",
     advantages: [
@@ -280,6 +358,43 @@ export const specialties: Record<string, SpecialtyContent> = {
       "Valoración de tu situación desde una perspectiva legal clara.",
       "Representación ante el juzgado para defender tus derechos.",
       "Acompañamiento durante todo tu proceso de recuperación legal.",
+    ],
+    cardSections: [
+      {
+        icon: AlertCircle,
+        title: "Lesiones intencionadas",
+        text: "Cuando el daño ha sido causado de forma deliberada por un tercero.",
+      },
+      {
+        icon: Car,
+        title: "Lesiones por imprudencia",
+        text: "Se dan cuando el daño no fue intencionado pero sí resultado de un comportamiento negligente, por ejemplo en accidentes de tráfico.",
+      },
+      {
+        icon: Stethoscope,
+        title: "Asistencia médica y pruebas",
+        text: "Te orientamos sobre cómo documentar correctamente tus lesiones para respaldar tu caso.",
+      },
+      {
+        icon: FileText,
+        title: "Reclamación de indemnización",
+        text: "Te ayudamos a reclamar la compensación que te corresponde por el daño sufrido.",
+      },
+      {
+        icon: Landmark,
+        title: "Representación ante el juzgado",
+        text: "Te acompañamos en todo el proceso legal, defendiendo tus derechos en cada fase.",
+      },
+      {
+        icon: Search,
+        title: "Valoración de tu caso",
+        text: "Analizamos las circunstancias concretas de tu situación para orientarte con claridad.",
+      },
+      {
+        icon: Scale,
+        title: "Defensa de tus intereses",
+        text: "Trabajamos para que el responsable de tus lesiones asuma las consecuencias legales que le correspondan.",
+      },
     ],
   },
 
