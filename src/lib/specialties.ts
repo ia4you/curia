@@ -1,4 +1,13 @@
+import type { LucideIcon } from "lucide-react";
+import { ShieldAlert, Briefcase, GraduationCap, Smartphone, FileCheck, HeartHandshake } from "lucide-react";
+
 export type Subtopic = {
+  title: string;
+  text: string;
+};
+
+export type CardSection = {
+  icon: LucideIcon;
   title: string;
   text: string;
 };
@@ -15,6 +24,9 @@ export type SpecialtyContent = {
   processParagraphs: string[];
   advantagesTitle: string;
   advantages: string[];
+  /** Optional short-card layout (icon + title + text) used instead of the
+   * long-form intro/subtopics/processParagraphs blocks when present. */
+  cardSections?: CardSection[];
 };
 
 export const specialties: Record<string, SpecialtyContent> = {
@@ -367,6 +379,38 @@ export const specialties: Record<string, SpecialtyContent> = {
       "Valoración de las distintas vías legales disponibles en tu caso.",
       "Representación y defensa de tus derechos en cada fase del proceso.",
       "Acompañamiento cercano en una situación personalmente difícil.",
+    ],
+    cardSections: [
+      {
+        icon: ShieldAlert,
+        title: "Qué se considera acoso",
+        text: "Un trato hostil y reiterado que afecta al bienestar de una persona, ya sea en el trabajo, en el entorno escolar o en las relaciones personales.",
+      },
+      {
+        icon: Briefcase,
+        title: "Acoso laboral",
+        text: "Trato hostil y reiterado en el entorno de trabajo que puede afectar tanto al desempeño como a la salud de quien lo sufre.",
+      },
+      {
+        icon: GraduationCap,
+        title: "Acoso escolar",
+        text: "Afecta a menores en el entorno educativo y requiere una actuación coordinada entre familia, centro escolar y asesoramiento legal.",
+      },
+      {
+        icon: Smartphone,
+        title: "Otras formas de acoso",
+        text: "Incluye el acoso en el entorno personal o a través de medios digitales, que también puede tener consecuencias legales.",
+      },
+      {
+        icon: FileCheck,
+        title: "Cómo actuar si lo sufres",
+        text: "Documenta lo ocurrido desde el primer momento: mensajes, correos, testigos o cualquier prueba que ayude a acreditar la situación.",
+      },
+      {
+        icon: HeartHandshake,
+        title: "Qué hacemos por ti",
+        text: "Te acompañamos desde el primer momento y te orientamos para actuar con seguridad, ya sea por la vía laboral, penal o civil.",
+      },
     ],
   },
 

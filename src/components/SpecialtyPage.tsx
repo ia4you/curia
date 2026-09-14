@@ -12,39 +12,60 @@ export default function SpecialtyPage({ data }: { data: SpecialtyContent }) {
       <Header />
       <SpecialtyHero title={data.title} navLabel={data.navLabel} />
 
-      <article className="bg-background py-16 md:py-20">
-        <div className="mx-auto max-w-[1600px] px-6 md:px-12 lg:px-20">
-          <div className="mx-auto max-w-3xl">
-            {data.intro.map((paragraph, i) => (
-              <p key={i} className="mb-5 leading-relaxed text-ink-soft">
-                {renderBold(paragraph)}
-              </p>
-            ))}
-
-            <h2 className="mt-10 font-serif text-2xl text-ink md:text-3xl">
-              {data.sectionTitle}
-            </h2>
-            <div className="mt-6 space-y-6">
-              {data.subtopics.map((subtopic) => (
-                <div key={subtopic.title}>
-                  <h3 className="font-serif text-lg text-ink">{subtopic.title}</h3>
-                  <p className="mt-2 leading-relaxed text-ink-soft">
-                    {renderBold(subtopic.text)}
-                  </p>
+      {data.cardSections ? (
+        <article className="bg-background py-16 md:py-20">
+          <div className="mx-auto max-w-[1600px] px-6 md:px-12 lg:px-20">
+            <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+              {data.cardSections.map((card) => (
+                <div
+                  key={card.title}
+                  className="border border-border-soft bg-white p-8 shadow-none transition-shadow hover:shadow-[0_10px_40px_-15px_rgba(15,43,39,0.2)]"
+                >
+                  <div className="flex h-14 w-14 items-center justify-center rounded-full bg-accent/10">
+                    <card.icon className="h-7 w-7 text-accent" strokeWidth={1.5} />
+                  </div>
+                  <h3 className="mt-5 font-serif text-lg text-ink">{card.title}</h3>
+                  <p className="mt-3 leading-relaxed text-ink-soft">{card.text}</p>
                 </div>
               ))}
             </div>
-
-            <div className="mt-10 space-y-5">
-              {data.processParagraphs.map((paragraph, i) => (
-                <p key={i} className="leading-relaxed text-ink-soft">
+          </div>
+        </article>
+      ) : (
+        <article className="bg-background py-16 md:py-20">
+          <div className="mx-auto max-w-[1600px] px-6 md:px-12 lg:px-20">
+            <div className="mx-auto max-w-3xl">
+              {data.intro.map((paragraph, i) => (
+                <p key={i} className="mb-5 leading-relaxed text-ink-soft">
                   {renderBold(paragraph)}
                 </p>
               ))}
+
+              <h2 className="mt-10 font-serif text-2xl text-ink md:text-3xl">
+                {data.sectionTitle}
+              </h2>
+              <div className="mt-6 space-y-6">
+                {data.subtopics.map((subtopic) => (
+                  <div key={subtopic.title}>
+                    <h3 className="font-serif text-lg text-ink">{subtopic.title}</h3>
+                    <p className="mt-2 leading-relaxed text-ink-soft">
+                      {renderBold(subtopic.text)}
+                    </p>
+                  </div>
+                ))}
+              </div>
+
+              <div className="mt-10 space-y-5">
+                {data.processParagraphs.map((paragraph, i) => (
+                  <p key={i} className="leading-relaxed text-ink-soft">
+                    {renderBold(paragraph)}
+                  </p>
+                ))}
+              </div>
             </div>
           </div>
-        </div>
-      </article>
+        </article>
+      )}
 
       <section className="bg-accent py-16 md:py-20">
         <div className="mx-auto max-w-[1600px] px-6 md:px-12 lg:px-20">
