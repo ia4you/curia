@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { CheckCircle2, Scale } from "lucide-react";
+import { CheckCircle2 } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import CtaBand from "@/components/CtaBand";
@@ -94,8 +94,13 @@ export default function SpecialtyPage({ data }: { data: SpecialtyContent }) {
       <section className="bg-accent py-16 md:py-20">
         <div className="mx-auto max-w-[1600px] px-6 md:px-12 lg:px-20">
           <div className="grid gap-10 md:grid-cols-2 md:items-center">
-            <div className="relative flex aspect-video items-center justify-center overflow-hidden bg-white/15">
-              <Scale className="h-16 w-16 text-ink/40" strokeWidth={1.2} />
+            <div className="relative aspect-[4/5] w-full overflow-hidden rounded-lg">
+              <Image
+                src="/images/contacto-equipo.webp"
+                alt="Saro Morales y Estefanía Pérez, fundadoras de Curia Abogados"
+                fill
+                className="object-cover"
+              />
             </div>
             <div>
               <h2 className="font-serif text-xl uppercase tracking-wide text-ink md:text-2xl">
