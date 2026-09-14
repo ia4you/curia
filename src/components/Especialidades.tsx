@@ -1,46 +1,48 @@
 import Link from "next/link";
-import { Siren, Home, HeartCrack, FileWarning, Split, Car } from "lucide-react";
+import { Split, Baby, Briefcase, Lock, ShieldAlert, Bandage } from "lucide-react";
 
 const especialidades = [
   {
-    icon: Siren,
-    titulo: "Acoso",
-    texto:
-      "Puede darse en cualquier ámbito y lo puede sufrir cualquier persona, sin distinción social o económica.",
-    href: "/acoso",
-  },
-  {
-    icon: Home,
-    titulo: "Desahucios",
-    texto: "Desalojo de inquilinos de vivienda o local comercial por orden judicial.",
-    href: "/desahucios",
-  },
-  {
-    icon: HeartCrack,
-    titulo: "Violencia de género",
-    texto: "Todo acto que pueda causar daño físico, sexual o psicológico a la mujer.",
-    href: "/violencia-de-genero",
-  },
-  {
-    icon: FileWarning,
-    titulo: "Incumplimientos contractuales",
-    texto:
-      "Reclamación de daños y perjuicios derivados del incumplimiento de acuerdos entre particulares o empresas.",
-    href: "/incumplimientos-contractuales",
-  },
-  {
     icon: Split,
-    titulo: "Divorcios",
+    titulo: "Divorcio",
     texto:
       "Disolución del matrimonio, a solicitud de uno o de los dos cónyuges, con acompañamiento en cada paso del proceso.",
     href: "/divorcio",
   },
   {
-    icon: Car,
-    titulo: "Accidentes de tráfico",
+    icon: Baby,
+    titulo: "Guarda y Custodia",
     texto:
-      "Reclamación de indemnizaciones por lesiones y daños derivados de siniestros viales.",
-    href: "/accidentes-de-trafico",
+      "Acuerdos y procesos judiciales para determinar la custodia y el régimen de visitas de los hijos menores.",
+    href: "/guarda-y-custodia",
+  },
+  {
+    icon: Briefcase,
+    titulo: "Despidos",
+    texto:
+      "Revisión y defensa ante despidos injustificados, indemnizaciones y otras cuestiones laborales.",
+    href: "/despidos",
+  },
+  {
+    icon: Lock,
+    titulo: "Robos o Hurtos",
+    texto:
+      "Defensa y acusación en delitos contra el patrimonio, tanto si eres víctima como si necesitas representación.",
+    href: "/robos-o-hurtos",
+  },
+  {
+    icon: ShieldAlert,
+    titulo: "Estafas",
+    texto:
+      "Asesoramiento y representación si has sido víctima de un engaño con perjuicio económico.",
+    href: "/estafas",
+  },
+  {
+    icon: Bandage,
+    titulo: "Lesiones",
+    texto:
+      "Defensa de tus derechos si has sufrido un daño físico por negligencia o agresión de terceros.",
+    href: "/lesiones",
   },
 ];
 

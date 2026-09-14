@@ -1,5 +1,5 @@
 import type { LucideIcon } from "lucide-react";
-import { ShieldAlert, Briefcase, GraduationCap, Smartphone, FileCheck, HeartHandshake } from "lucide-react";
+import { Handshake, Gavel, Baby, Scale, HeartHandshake } from "lucide-react";
 
 export type Subtopic = {
   title: string;
@@ -63,6 +63,33 @@ export const specialties: Record<string, SpecialtyContent> = {
       "Negociación del convenio regulador velando por tus intereses y los de tus hijos.",
       "Representación en el juzgado si el proceso se convierte en contencioso.",
       "Acompañamiento cercano en un momento personal difícil.",
+    ],
+    cardSections: [
+      {
+        icon: Handshake,
+        title: "Divorcio de mutuo acuerdo",
+        text: "Ambos cónyuges están de acuerdo en poner fin al matrimonio y en las condiciones que regularán la nueva situación familiar. Es la vía más rápida y menos desgastante.",
+      },
+      {
+        icon: Gavel,
+        title: "Divorcio contencioso",
+        text: "Cuando no hay acuerdo entre las partes, es un juez quien debe resolver las cuestiones pendientes. Requiere más tiempo y una defensa sólida.",
+      },
+      {
+        icon: Baby,
+        title: "Custodia y manutención de los hijos",
+        text: "Uno de los aspectos más importantes a resolver: qué pasará con la custodia de los hijos y cómo se organizará su manutención.",
+      },
+      {
+        icon: Scale,
+        title: "División de bienes",
+        text: "El reparto de los bienes comunes y el uso de la vivienda familiar son cuestiones clave que deben quedar bien resueltas en el proceso.",
+      },
+      {
+        icon: HeartHandshake,
+        title: "Cómo te ayudamos",
+        text: "Te acompañamos en cada paso, priorizando acuerdos cuando es posible y defendiendo tu posición con firmeza cuando no lo es.",
+      },
     ],
   },
 
@@ -342,252 +369,15 @@ export const specialties: Record<string, SpecialtyContent> = {
     ],
   },
 
-  acoso: {
-    slug: "acoso",
-    navLabel: "Acoso",
-    title: "Acoso en Las Palmas de Gran Canaria",
-    metaTitle: "Abogado de Acoso en Las Palmas de Gran Canaria | Curia Abogados",
-    metaDescription:
-      "Asesoramiento legal en casos de acoso laboral, escolar o personal en Las Palmas de Gran Canaria. Te ayudamos a defender tus derechos con cercanía y discreción.",
-    intro: [
-      "El acoso puede darse en distintos ámbitos de la vida —en el trabajo, en el entorno escolar o en las relaciones personales— y en todos los casos supone una situación que afecta profundamente al bienestar de quien lo sufre. Un **abogado especializado en casos de acoso** puede ayudarte a entender si lo que estás viviendo tiene una vía legal y cómo actuar.",
-      "En Curia Abogados atendemos a personas en Las Palmas de Gran Canaria que se encuentran en esta situación, ofreciendo un acompañamiento cercano desde el primer momento.",
-    ],
-    sectionTitle: "Ámbitos donde puede darse el acoso",
-    subtopics: [
-      {
-        title: "Acoso laboral",
-        text: "Se produce en el entorno de trabajo, a través de un **trato hostil y reiterado** que puede afectar tanto al desempeño como a la salud de quien lo sufre.",
-      },
-      {
-        title: "Acoso escolar",
-        text: "Afecta a menores en el entorno educativo y requiere una actuación coordinada entre familia, centro escolar y, si es necesario, asesoramiento legal.",
-      },
-      {
-        title: "Otras formas de acoso",
-        text: "Incluye situaciones de acoso en el entorno personal o a través de medios digitales, que también pueden tener **consecuencias legales**.",
-      },
-    ],
-    processParagraphs: [
-      "Si estás sufriendo una situación de acoso, es importante **documentar lo ocurrido** desde el primer momento: mensajes, correos, testigos o cualquier prueba que ayude a acreditar la situación.",
-      "El proceso puede variar mucho según el ámbito en el que se produzca el acoso y la gravedad de los hechos, por lo que es recomendable contar con asesoramiento cuanto antes para saber qué pasos dar.",
-      "Te acompañamos para que puedas actuar con seguridad, ya sea a través de la vía laboral, penal o civil, según corresponda a tu situación.",
-    ],
-    advantagesTitle: "VENTAJAS DE CONTAR CON UN ABOGADO EN CASOS DE ACOSO",
-    advantages: [
-      "Orientación sobre qué pruebas conviene reunir desde el principio.",
-      "Valoración de las distintas vías legales disponibles en tu caso.",
-      "Representación y defensa de tus derechos en cada fase del proceso.",
-      "Acompañamiento cercano en una situación personalmente difícil.",
-    ],
-    cardSections: [
-      {
-        icon: ShieldAlert,
-        title: "Qué se considera acoso",
-        text: "Un trato hostil y reiterado que afecta al bienestar de una persona, ya sea en el trabajo, en el entorno escolar o en las relaciones personales.",
-      },
-      {
-        icon: Briefcase,
-        title: "Acoso laboral",
-        text: "Trato hostil y reiterado en el entorno de trabajo que puede afectar tanto al desempeño como a la salud de quien lo sufre.",
-      },
-      {
-        icon: GraduationCap,
-        title: "Acoso escolar",
-        text: "Afecta a menores en el entorno educativo y requiere una actuación coordinada entre familia, centro escolar y asesoramiento legal.",
-      },
-      {
-        icon: Smartphone,
-        title: "Otras formas de acoso",
-        text: "Incluye el acoso en el entorno personal o a través de medios digitales, que también puede tener consecuencias legales.",
-      },
-      {
-        icon: FileCheck,
-        title: "Cómo actuar si lo sufres",
-        text: "Documenta lo ocurrido desde el primer momento: mensajes, correos, testigos o cualquier prueba que ayude a acreditar la situación.",
-      },
-      {
-        icon: HeartHandshake,
-        title: "Qué hacemos por ti",
-        text: "Te acompañamos desde el primer momento y te orientamos para actuar con seguridad, ya sea por la vía laboral, penal o civil.",
-      },
-    ],
-  },
-
-  desahucios: {
-    slug: "desahucios",
-    navLabel: "Desahucios",
-    title: "Desahucios en Las Palmas de Gran Canaria",
-    metaTitle: "Abogado de Desahucios en Las Palmas de Gran Canaria | Curia Abogados",
-    metaDescription:
-      "Asesoramiento legal en procesos de desahucio en Las Palmas de Gran Canaria, tanto para propietarios como para inquilinos, con un trato cercano y directo.",
-    intro: [
-      "Un desahucio es un proceso que puede generar mucha tensión, tanto para el propietario que necesita recuperar su vivienda o local, como para el inquilino que se enfrenta a la posibilidad de perder su hogar. Un **abogado especializado en desahucios** puede ayudarte a entender el proceso y a defender tu posición, sea cual sea tu papel en él.",
-      "En Curia Abogados asesoramos tanto a propietarios como a inquilinos en Las Palmas de Gran Canaria, buscando siempre la solución más rápida y menos conflictiva posible.",
-    ],
-    sectionTitle: "Situaciones habituales",
-    subtopics: [
-      {
-        title: "Falta de pago de la renta",
-        text: "Es la causa más frecuente de desahucio, cuando el inquilino **deja de abonar la renta** acordada en el contrato de arrendamiento.",
-      },
-      {
-        title: "Finalización del contrato",
-        text: "Se produce cuando el contrato de arrendamiento llega a su fin y el inquilino no abandona la vivienda o el local.",
-      },
-      {
-        title: "Ocupación sin título",
-        text: "Afecta a inmuebles ocupados sin el consentimiento del propietario, una situación que requiere una **actuación legal específica**.",
-      },
-    ],
-    processParagraphs: [
-      "Si eres propietario y te encuentras en esta situación, es importante **reunir toda la documentación** del contrato de arrendamiento y de los pagos realizados, para poder iniciar el proceso con la mayor solidez posible.",
-      "Si eres inquilino, contar con asesoramiento cuanto antes te ayudará a entender tus opciones y los plazos con los que cuentas para responder a la situación.",
-      "El proceso puede variar según las circunstancias del caso, por lo que es recomendable valorar tu situación concreta con un profesional antes de tomar cualquier decisión.",
-    ],
-    advantagesTitle: "VENTAJAS DE CONTAR CON UN ABOGADO EN UN DESAHUCIO",
-    advantages: [
-      "Asesoramiento adaptado según seas propietario o inquilino.",
-      "Orientación sobre la documentación necesaria para iniciar o responder al proceso.",
-      "Búsqueda de acuerdos que eviten un proceso judicial más largo.",
-      "Representación legal durante todo el procedimiento.",
-    ],
-  },
-
-  "violencia-de-genero": {
-    slug: "violencia-de-genero",
-    navLabel: "Violencia de Género",
-    title: "Violencia de Género en Las Palmas de Gran Canaria",
-    metaTitle: "Abogada de Violencia de Género en Las Palmas de Gran Canaria | Curia Abogados",
-    metaDescription:
-      "Acompañamiento legal especializado en casos de violencia de género en Las Palmas de Gran Canaria. Atención cercana, confidencial y profesional en todo momento.",
-    intro: [
-      "La violencia de género es una situación que requiere una respuesta legal firme, pero también un acompañamiento humano y cercano. Si estás viviendo o has vivido esta situación, contar con una **abogada especializada en violencia de género** puede ayudarte a sentirte más segura y acompañada durante todo el proceso.",
-      "En Curia Abogados atendemos a mujeres en Las Palmas de Gran Canaria que se encuentran en esta situación, ofreciendo asesoramiento confidencial desde el primer contacto.",
-    ],
-    sectionTitle: "Cómo podemos ayudarte",
-    subtopics: [
-      {
-        title: "Denuncia y medidas de protección",
-        text: "Te acompañamos en el proceso de denuncia y en la solicitud de **medidas de protección** que puedan corresponder a tu situación.",
-      },
-      {
-        title: "Procedimiento penal",
-        text: "Te representamos durante todo el procedimiento penal, velando por que tus derechos queden protegidos en cada fase.",
-      },
-      {
-        title: "Aspectos civiles asociados",
-        text: "Cuando hay hijos en común, también te asesoramos en cuestiones de custodia, régimen de visitas o uso de la vivienda familiar.",
-      },
-    ],
-    processParagraphs: [
-      "Dar el paso de denunciar no es fácil, y por eso es importante sentirte acompañada desde el primer momento. **Contar con la información adecuada** sobre tus derechos y las medidas de protección disponibles te ayudará a tomar decisiones con mayor seguridad.",
-      "El proceso puede variar según cada situación particular, por lo que es fundamental que tu caso sea valorado de forma individual y con la máxima confidencialidad.",
-      "Nuestro compromiso es ofrecerte un acompañamiento cercano y profesional en cada paso, tanto en el ámbito penal como en cualquier cuestión civil relacionada, como la custodia de los hijos.",
-    ],
-    advantagesTitle: "VENTAJAS DE CONTAR CON UNA ABOGADA ESPECIALIZADA EN VIOLENCIA DE GÉNERO",
-    advantages: [
-      "Atención cercana, confidencial y sin juicios.",
-      "Asesoramiento sobre las medidas de protección disponibles.",
-      "Representación legal durante todo el procedimiento penal.",
-      "Acompañamiento también en los aspectos civiles relacionados, como la custodia de los hijos.",
-    ],
-  },
-
-  "incumplimientos-contractuales": {
-    slug: "incumplimientos-contractuales",
-    navLabel: "Incumplimientos Contractuales",
-    title: "Incumplimientos Contractuales en Las Palmas de Gran Canaria",
-    metaTitle:
-      "Abogado de Incumplimientos Contractuales en Las Palmas de Gran Canaria | Curia Abogados",
-    metaDescription:
-      "Reclamamos incumplimientos de contratos entre particulares y empresas en Las Palmas de Gran Canaria, con un asesoramiento legal claro, directo y efectivo.",
-    intro: [
-      "Cuando una de las partes de un contrato no cumple con lo acordado, la otra parte puede sufrir un perjuicio real, ya sea económico o de otro tipo. Un **abogado especializado en incumplimientos contractuales** puede ayudarte a valorar qué opciones tienes para reclamar lo que te corresponde.",
-      "En Curia Abogados asesoramos a particulares y empresas en Las Palmas de Gran Canaria ante todo tipo de incumplimientos de contrato, buscando siempre la solución más eficaz para tus intereses.",
-    ],
-    sectionTitle: "Situaciones habituales",
-    subtopics: [
-      {
-        title: "Incumplimiento total",
-        text: "Una de las partes **no cumple en absoluto** con las obligaciones asumidas en el contrato.",
-      },
-      {
-        title: "Cumplimiento defectuoso",
-        text: "El contrato se cumple, pero no en los términos, plazos o condiciones de calidad **acordados originalmente**.",
-      },
-      {
-        title: "Retraso en el cumplimiento",
-        text: "Las obligaciones se cumplen, pero fuera del plazo pactado, generando un perjuicio para la otra parte.",
-      },
-    ],
-    processParagraphs: [
-      "Antes de reclamar, es importante **revisar bien el contrato** y reunir toda la documentación relacionada: comunicaciones, facturas, presupuestos o cualquier prueba del incumplimiento.",
-      "En muchos casos, una reclamación extrajudicial bien planteada puede resolver la situación sin necesidad de acudir a juicio, lo que ahorra tiempo y costes a ambas partes.",
-      "Cuando no es posible llegar a un acuerdo, te representamos para reclamar por la vía judicial, defendiendo tu posición con la documentación y los argumentos necesarios.",
-    ],
-    advantagesTitle: "VENTAJAS DE CONTAR CON UN ABOGADO ANTE UN INCUMPLIMIENTO CONTRACTUAL",
-    advantages: [
-      "Revisión detallada del contrato y de la documentación disponible.",
-      "Intento de resolución extrajudicial antes de llegar a juicio.",
-      "Reclamación judicial cuando no es posible un acuerdo.",
-      "Defensa de tus intereses frente a particulares o empresas.",
-    ],
-  },
-
-  "accidentes-de-trafico": {
-    slug: "accidentes-de-trafico",
-    navLabel: "Accidentes de Tráfico",
-    title: "Accidentes de Tráfico en Las Palmas de Gran Canaria",
-    metaTitle: "Abogado de Accidentes de Tráfico en Las Palmas de Gran Canaria | Curia Abogados",
-    metaDescription:
-      "Reclamamos los daños derivados de accidentes de tráfico en Las Palmas de Gran Canaria. Te ayudamos a obtener la indemnización justa que te corresponde.",
-    intro: [
-      "Un accidente de tráfico puede tener consecuencias físicas, materiales y económicas que conviene gestionar con el respaldo adecuado. Un **abogado especializado en accidentes de tráfico** puede ayudarte a reclamar frente a la compañía de seguros los daños que hayas sufrido.",
-      "En Curia Abogados acompañamos a personas en Las Palmas de Gran Canaria que han sufrido un accidente de tráfico, ayudándoles a reclamar tanto los daños materiales como los personales.",
-    ],
-    sectionTitle: "Qué se puede reclamar",
-    subtopics: [
-      {
-        title: "Daños materiales",
-        text: "Incluyen los desperfectos en el vehículo y otros bienes afectados por el accidente.",
-      },
-      {
-        title: "Daños personales",
-        text: "Se refieren a las lesiones sufridas y su impacto en tu vida diaria, que deben quedar **debidamente acreditados** con informes médicos.",
-      },
-      {
-        title: "Otros perjuicios",
-        text: "En determinados casos también pueden reclamarse otros perjuicios derivados del accidente, según las circunstancias concretas.",
-      },
-    ],
-    processParagraphs: [
-      "Tras un accidente, es fundamental **acudir a un servicio médico** aunque los síntomas parezcan leves, y conservar todos los informes y partes de asistencia relacionados con el accidente.",
-      "El proceso de reclamación puede variar según la compañía aseguradora y las circunstancias del accidente, por lo que conviene contar con asesoramiento antes de aceptar cualquier oferta de indemnización.",
-      "Nuestro trabajo es revisar tu caso, reunir la documentación necesaria y negociar con la aseguradora para que la indemnización refleje el daño real que has sufrido.",
-    ],
-    advantagesTitle: "VENTAJAS DE CONTAR CON UN ABOGADO TRAS UN ACCIDENTE DE TRÁFICO",
-    advantages: [
-      "Revisión de tu caso y de la documentación médica y del accidente.",
-      "Negociación con la compañía aseguradora en tu nombre.",
-      "Defensa de tus intereses si la oferta de indemnización no es adecuada.",
-      "Acompañamiento durante todo el proceso de recuperación y reclamación.",
-    ],
-  },
 };
 
 export const specialtySlugs = Object.keys(specialties);
 
 export const dropdownSpecialties = [
-  "accidentes-de-trafico",
-  "acoso",
-  "desahucios",
-  "despidos",
   "divorcio",
-  "estafas",
   "guarda-y-custodia",
-  "incumplimientos-contractuales",
-  "lesiones",
+  "despidos",
   "robos-o-hurtos",
-  "violencia-de-genero",
+  "estafas",
+  "lesiones",
 ].map((slug) => specialties[slug]);

@@ -2,12 +2,12 @@ import Link from "next/link";
 import { Phone, Mail, MapPin } from "lucide-react";
 
 const areas = [
-  { label: "Acoso", href: "/acoso" },
-  { label: "Desahucios", href: "/desahucios" },
-  { label: "Violencia de género", href: "/violencia-de-genero" },
-  { label: "Incumplimientos contractuales", href: "/incumplimientos-contractuales" },
-  { label: "Divorcios", href: "/divorcio" },
-  { label: "Accidentes de tráfico", href: "/accidentes-de-trafico" },
+  { label: "Divorcio", href: "/divorcio" },
+  { label: "Guarda y Custodia", href: "/guarda-y-custodia" },
+  { label: "Despidos", href: "/despidos" },
+  { label: "Robos o Hurtos", href: "/robos-o-hurtos" },
+  { label: "Estafas", href: "/estafas" },
+  { label: "Lesiones", href: "/lesiones" },
 ];
 
 const enlaces = ["Aviso legal", "Política de privacidad", "Cookies", "Términos y condiciones"];
