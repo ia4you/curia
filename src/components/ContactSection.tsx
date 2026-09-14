@@ -12,10 +12,10 @@ export default function ContactSection() {
       <div className="grid md:grid-cols-2">
         <div className="relative order-last hidden min-h-[420px] md:order-first md:block">
           <Image
-            src="/images/hero-socias.jpg"
-            alt="Estefanía Pérez y Saro Morales en su despacho de Las Palmas de Gran Canaria"
+            src="/images/contacto-equipo.jpg"
+            alt="Saro Morales y Estefanía Pérez, fundadoras de Curia Abogados, en su despacho de Las Palmas de Gran Canaria"
             fill
-            className="object-cover"
+            className="object-cover object-right"
           />
         </div>
 
