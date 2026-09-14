@@ -68,7 +68,7 @@ export default function Especialidades() {
             <Link
               key={item.titulo}
               href={item.href}
-              className="border border-border-soft bg-white p-8 text-center shadow-none transition-shadow hover:shadow-[0_10px_40px_-15px_rgba(15,43,39,0.2)]"
+              className="border border-border-soft bg-white p-8 text-center shadow-none transition-colors duration-200 hover:border-accent hover:bg-accent/10"
             >
               <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-accent/10">
                 <item.icon className="h-7 w-7 text-accent" strokeWidth={1.5} />
