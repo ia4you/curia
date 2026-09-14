@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import SpecialtyPage from "@/components/SpecialtyPage";
 import { specialties, specialtySlugs } from "@/lib/specialties";
+import { SITE_URL } from "@/lib/site";
 
 export const dynamicParams = false;
 
@@ -21,6 +22,9 @@ export async function generateMetadata({
   return {
     title: data.metaTitle,
     description: data.metaDescription,
+    alternates: {
+      canonical: `${SITE_URL}/${slug}`,
+    },
   };
 }
 

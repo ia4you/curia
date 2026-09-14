@@ -10,7 +10,12 @@ const areas = [
   { label: "Lesiones", href: "/lesiones" },
 ];
 
-const enlaces = ["Aviso legal", "Política de privacidad", "Cookies", "Términos y condiciones"];
+const enlaces = [
+  { label: "Aviso legal", href: "/aviso-legal" },
+  { label: "Política de privacidad", href: "/politica-de-privacidad" },
+  { label: "Cookies", href: "/cookies" },
+  { label: "Términos y condiciones", href: "/terminos-y-condiciones" },
+];
 
 export default function Footer() {
   return (
@@ -79,10 +84,10 @@ export default function Footer() {
             </p>
             <ul className="mt-4 space-y-3 text-sm">
               {enlaces.map((enlace) => (
-                <li key={enlace}>
-                  <a href="#" className="hover:text-accent-dark">
-                    {enlace}
-                  </a>
+                <li key={enlace.href}>
+                  <Link href={enlace.href} className="hover:text-accent-dark">
+                    {enlace.label}
+                  </Link>
                 </li>
               ))}
             </ul>

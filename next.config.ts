@@ -11,6 +11,15 @@ const retiredSlugs = [
   "accidentes-de-trafico",
 ];
 
+// IMPORTANTE — pendiente para el cambio de dominio a curiaabogados.es:
+// Los redirects .html de abajo solo están activos en este despliegue de
+// curia.turel.es. Cuando el dominio definitivo entre en producción, hay que
+// verificar que estas mismas reglas (o su equivalente) se configuren también
+// ahí — si no, las URLs antiguas indexadas de curiaabogados.es quedarán sin
+// redirección real y se perderá el valor SEO que este archivo pretende
+// preservar. Los canonical tags (src/lib/site.ts) ya apuntan a
+// curiaabogados.es de forma anticipada, pero eso no sustituye tener los
+// redirects funcionando en el dominio real.
 const nextConfig: NextConfig = {
   async redirects() {
     return [
