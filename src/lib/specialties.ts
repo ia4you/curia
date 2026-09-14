@@ -1,5 +1,5 @@
 import type { LucideIcon } from "lucide-react";
-import { Handshake, Gavel, Baby, Scale, HeartHandshake } from "lucide-react";
+import { Handshake, Scale, Users, Home, FileText, HeartHandshake, ShieldCheck } from "lucide-react";
 
 export type Subtopic = {
   title: string;
@@ -19,13 +19,14 @@ export type SpecialtyContent = {
   metaTitle: string;
   metaDescription: string;
   intro: string[];
-  sectionTitle: string;
-  subtopics: Subtopic[];
-  processParagraphs: string[];
+  /** The following three are only used by the long-form layout (no cardSections). */
+  sectionTitle?: string;
+  subtopics?: Subtopic[];
+  processParagraphs?: string[];
   advantagesTitle: string;
   advantages: string[];
   /** Optional short-card layout (icon + title + text) used instead of the
-   * long-form intro/subtopics/processParagraphs blocks when present. */
+   * long-form sectionTitle/subtopics/processParagraphs blocks when present. */
   cardSections?: CardSection[];
 };
 
@@ -33,29 +34,12 @@ export const specialties: Record<string, SpecialtyContent> = {
   divorcio: {
     slug: "divorcio",
     navLabel: "Divorcio",
-    title: "Divorcio en Las Palmas de Gran Canaria",
-    metaTitle: "Divorcio en Las Palmas de Gran Canaria | Curia Abogados",
+    title: "Abogados especializados en divorcio",
+    metaTitle: "Abogados de Divorcio en Las Palmas de Gran Canaria | Curia Abogados",
     metaDescription:
-      "Abogadas especializadas en divorcios de mutuo acuerdo y contenciosos en Las Palmas de Gran Canaria. Te acompañamos en cada etapa con trato cercano y directo.",
+      "Asesoramiento legal en divorcios de mutuo acuerdo y contenciosos en Las Palmas de Gran Canaria. Más de 15 años ayudando a familias a resolver su separación con cercanía y seguridad jurídica.",
     intro: [
-      "Afrontar un divorcio implica tomar decisiones que van a marcar el día a día de toda la familia: la custodia de los hijos, el reparto de bienes o el uso de la vivienda son solo algunos de los aspectos que hay que resolver. Contar con una **abogada especializada en divorcios** desde el primer momento ayuda a que el proceso avance con orden y con la tranquilidad de saber que tus intereses están protegidos.",
-      "En Curia Abogados acompañamos a nuestros clientes en Las Palmas de Gran Canaria en todo tipo de procesos de separación y divorcio, adaptando la estrategia a la situación particular de cada familia y buscando siempre la solución más ágil posible.",
-    ],
-    sectionTitle: "Tipos de divorcio",
-    subtopics: [
-      {
-        title: "Divorcio de mutuo acuerdo",
-        text: "Se produce cuando ambos cónyuges están de acuerdo en poner fin al matrimonio y en las condiciones que regularán la nueva situación familiar. Suele ser la vía **más rápida y menos desgastante emocionalmente**, siempre que exista un buen convenio regulador.",
-      },
-      {
-        title: "Divorcio contencioso",
-        text: "Cuando no hay acuerdo entre las partes, es un juez quien debe resolver las cuestiones pendientes. Es un proceso que **requiere más tiempo y una defensa sólida**, por lo que contar con representación legal experimentada es especialmente importante.",
-      },
-    ],
-    processParagraphs: [
-      "Cada divorcio es distinto, pero casi todos comparten preguntas similares: qué pasará con la custodia de los hijos, cómo se repartirán los bienes comunes y quién se quedará en la vivienda familiar. Antes de dar cualquier paso, es recomendable **reunir la documentación relevante** y tener una primera conversación con tu abogada para entender qué opciones tienes.",
-      "El proceso puede variar según cada caso, especialmente si hay hijos menores o patrimonio complejo de por medio. Nuestro trabajo es explicarte con claridad qué esperar en cada fase, para que tomes decisiones informadas y sin más estrés del necesario.",
-      "Buscamos siempre la vía que mejor proteja tanto tu situación personal como la de tus hijos, priorizando acuerdos cuando es posible y defendiendo tu posición con firmeza cuando no lo es.",
+      "Un divorcio implica decisiones que van a marcar tu vida durante años: la custodia y manutención de los hijos, el reparto de bienes, el futuro de la vivienda familiar. Contar con una abogada especializada en divorcios no solo te da seguridad jurídica, también te ayuda a atravesar un proceso que suele ser emocionalmente difícil, con alguien que gestiona los plazos y la documentación por ti. En Curia Abogados acompañamos a nuestros clientes en Las Palmas de Gran Canaria en cada tipo de divorcio, cuidando que el proceso sea lo más ágil y claro posible.",
     ],
     advantagesTitle: "VENTAJAS DE CONTAR CON UN ABOGADO PARA TU DIVORCIO",
     advantages: [
@@ -68,27 +52,37 @@ export const specialties: Record<string, SpecialtyContent> = {
       {
         icon: Handshake,
         title: "Divorcio de mutuo acuerdo",
-        text: "Ambos cónyuges están de acuerdo en poner fin al matrimonio y en las condiciones que regularán la nueva situación familiar. Es la vía más rápida y menos desgastante.",
-      },
-      {
-        icon: Gavel,
-        title: "Divorcio contencioso",
-        text: "Cuando no hay acuerdo entre las partes, es un juez quien debe resolver las cuestiones pendientes. Requiere más tiempo y una defensa sólida.",
-      },
-      {
-        icon: Baby,
-        title: "Custodia y manutención de los hijos",
-        text: "Uno de los aspectos más importantes a resolver: qué pasará con la custodia de los hijos y cómo se organizará su manutención.",
+        text: "Cuando ambos cónyuges están de acuerdo, basta con 3 meses de matrimonio y un convenio regulador. Es el proceso más rápido y económico.",
       },
       {
         icon: Scale,
-        title: "División de bienes",
-        text: "El reparto de los bienes comunes y el uso de la vivienda familiar son cuestiones clave que deben quedar bien resueltas en el proceso.",
+        title: "Divorcio contencioso",
+        text: "Sin acuerdo entre las partes, cualquier cónyuge puede solicitar el divorcio igualmente, sin alegar causa. Es el juez quien resuelve custodia y bienes.",
+      },
+      {
+        icon: Users,
+        title: "Custodia de los hijos",
+        text: "Te asesoramos en todo lo relativo a la guarda, custodia y régimen de visitas, priorizando siempre el bienestar de los menores.",
+      },
+      {
+        icon: Home,
+        title: "Reparto de bienes",
+        text: "Gestionamos el convenio regulador y la liquidación del patrimonio común de forma clara y justa para ambas partes.",
+      },
+      {
+        icon: FileText,
+        title: "Coordinación de plazos y documentación",
+        text: "Nos encargamos de preparar y presentar toda la documentación ante el juzgado, agilizando cada paso del proceso.",
       },
       {
         icon: HeartHandshake,
-        title: "Cómo te ayudamos",
-        text: "Te acompañamos en cada paso, priorizando acuerdos cuando es posible y defendiendo tu posición con firmeza cuando no lo es.",
+        title: "Acompañamiento cercano",
+        text: "Sabemos que es un momento emocionalmente difícil. Te acompañamos con trato honesto y cercano en cada decisión.",
+      },
+      {
+        icon: ShieldCheck,
+        title: "Defensa de tus intereses",
+        text: "Ya sea de mutuo acuerdo o contencioso, velamos por tus intereses y los de tus hijos en cada fase del proceso.",
       },
     ],
   },

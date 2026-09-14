@@ -15,7 +15,15 @@ export default function SpecialtyPage({ data }: { data: SpecialtyContent }) {
       {data.cardSections ? (
         <article className="bg-background py-16 md:py-20">
           <div className="mx-auto max-w-[1600px] px-6 md:px-12 lg:px-20">
-            <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+            <div className="mx-auto max-w-3xl">
+              {data.intro.map((paragraph, i) => (
+                <p key={i} className="mb-5 leading-relaxed text-ink-soft">
+                  {renderBold(paragraph)}
+                </p>
+              ))}
+            </div>
+
+            <div className="mt-10 grid grid-cols-1 gap-6 md:grid-cols-2">
               {data.cardSections.map((card) => (
                 <div
                   key={card.title}
@@ -41,11 +49,13 @@ export default function SpecialtyPage({ data }: { data: SpecialtyContent }) {
                 </p>
               ))}
 
-              <h2 className="mt-10 font-serif text-2xl text-ink md:text-3xl">
-                {data.sectionTitle}
-              </h2>
+              {data.sectionTitle && (
+                <h2 className="mt-10 font-serif text-2xl text-ink md:text-3xl">
+                  {data.sectionTitle}
+                </h2>
+              )}
               <div className="mt-6 space-y-6">
-                {data.subtopics.map((subtopic) => (
+                {data.subtopics?.map((subtopic) => (
                   <div key={subtopic.title}>
                     <h3 className="font-serif text-lg text-ink">{subtopic.title}</h3>
                     <p className="mt-2 leading-relaxed text-ink-soft">
@@ -56,7 +66,7 @@ export default function SpecialtyPage({ data }: { data: SpecialtyContent }) {
               </div>
 
               <div className="mt-10 space-y-5">
-                {data.processParagraphs.map((paragraph, i) => (
+                {data.processParagraphs?.map((paragraph, i) => (
                   <p key={i} className="leading-relaxed text-ink-soft">
                     {renderBold(paragraph)}
                   </p>
