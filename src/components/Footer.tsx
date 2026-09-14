@@ -14,16 +14,12 @@ const enlaces = ["Aviso legal", "Política de privacidad", "Cookies", "Términos
 
 export default function Footer() {
   return (
-    <footer className="bg-ink text-white/80">
+    <footer className="bg-accent text-ink">
       <div className="mx-auto max-w-[1600px] px-6 py-16 md:px-12 lg:px-20">
         <div className="grid gap-12 sm:grid-cols-2 lg:grid-cols-4">
           <div>
-            <img
-              src="/images/logo.png"
-              alt="Curia Abogados"
-              className="h-9 w-auto brightness-0 invert"
-            />
-            <p className="mt-4 max-w-xs text-sm leading-relaxed text-white/60">
+            <img src="/images/logo.png" alt="Curia Abogados" className="h-9 w-auto brightness-0" />
+            <p className="mt-4 max-w-xs text-sm leading-relaxed text-ink/90">
               Despacho de abogados en Las Palmas de Gran Canaria. Queremos
               ayudarte a solucionar todo tipo de conflictos que se originan en
               la vida cotidiana de las personas.
@@ -31,25 +27,28 @@ export default function Footer() {
           </div>
 
           <div>
-            <p className="text-sm font-semibold uppercase tracking-wide text-white/50">
+            <p className="text-sm font-semibold uppercase tracking-wide text-accent-dark">
               Contacto
             </p>
             <ul className="mt-4 space-y-3 text-sm">
               <li>
-                <a href="tel:+34928248581" className="flex items-center gap-2 hover:text-white">
-                  <Phone className="h-4 w-4 shrink-0 text-accent" /> 928 248 581
+                <a
+                  href="tel:+34928248581"
+                  className="flex items-center gap-2 hover:text-accent-dark"
+                >
+                  <Phone className="h-4 w-4 shrink-0 text-accent-dark" /> 928 248 581
                 </a>
               </li>
               <li>
                 <a
                   href="mailto:info@curiaabogados.es"
-                  className="flex items-center gap-2 hover:text-white"
+                  className="flex items-center gap-2 hover:text-accent-dark"
                 >
-                  <Mail className="h-4 w-4 shrink-0 text-accent" /> info@curiaabogados.es
+                  <Mail className="h-4 w-4 shrink-0 text-accent-dark" /> info@curiaabogados.es
                 </a>
               </li>
               <li className="flex items-start gap-2">
-                <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-accent" />
+                <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-accent-dark" />
                 <span>
                   C/ León y Castillo 39, 5B
                   <br />
@@ -60,13 +59,13 @@ export default function Footer() {
           </div>
 
           <div>
-            <p className="text-sm font-semibold uppercase tracking-wide text-white/50">
+            <p className="text-sm font-semibold uppercase tracking-wide text-accent-dark">
               Áreas de derecho
             </p>
             <ul className="mt-4 space-y-3 text-sm">
               {areas.map((area) => (
                 <li key={area.href}>
-                  <Link href={area.href} className="hover:text-white">
+                  <Link href={area.href} className="hover:text-accent-dark">
                     {area.label}
                   </Link>
                 </li>
@@ -75,13 +74,13 @@ export default function Footer() {
           </div>
 
           <div>
-            <p className="text-sm font-semibold uppercase tracking-wide text-white/50">
+            <p className="text-sm font-semibold uppercase tracking-wide text-accent-dark">
               Enlaces
             </p>
             <ul className="mt-4 space-y-3 text-sm">
               {enlaces.map((enlace) => (
                 <li key={enlace}>
-                  <a href="#" className="hover:text-white">
+                  <a href="#" className="hover:text-accent-dark">
                     {enlace}
                   </a>
                 </li>
@@ -90,7 +89,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-16 border-t border-white/10 pt-6 text-center text-xs text-white/50">
+        <div className="mt-16 border-t border-ink/15 pt-6 text-center text-xs text-ink">
           &copy; {new Date().getFullYear()} Curia Abogados. Todos los derechos reservados.
         </div>
       </div>
