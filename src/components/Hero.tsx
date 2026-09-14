@@ -12,7 +12,7 @@ export default function Hero() {
         }}
       >
         <Image
-          src="/images/hero-oficina.jpeg"
+          src="/images/hero-oficina.webp"
           alt="Estefanía Pérez y Saro Morales en el despacho de Curia Abogados"
           fill
           preload

@@ -24,7 +24,7 @@ export default function Equipo() {
         <div className="mx-auto mt-14 max-w-4xl">
           <div className="relative aspect-[16/10] w-full overflow-hidden shadow-[0_10px_40px_-15px_rgba(15,43,39,0.25)]">
             <Image
-              src="/images/equipo-consulta.jpg"
+              src="/images/equipo-consulta.webp"
               alt="Estefanía Pérez y Saro Morales, socias fundadoras de Curia Abogados, en consulta con una clienta"
               fill
               className="object-cover object-[50%_42%]"

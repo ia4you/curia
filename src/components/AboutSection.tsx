@@ -15,7 +15,7 @@ export default function AboutSection() {
           />
           <div className="relative aspect-[4/3] w-full overflow-hidden">
             <Image
-              src="/images/equipo-oficina.jpg"
+              src="/images/equipo-oficina.webp"
               alt="Estefanía Pérez y Saro Morales, socias fundadoras de Curia Abogados, en su despacho"
               fill
               className="object-cover object-[55%_center]"

@@ -61,7 +61,7 @@ export type SpecialtyContent = {
    * long-form sectionTitle/subtopics/processParagraphs blocks when present. */
   cardSections?: CardSection[];
   /** Image shown next to the intro paragraph on cardSections pages.
-   * Defaults to equipo-consulta.jpg when not set. */
+   * Defaults to equipo-consulta.webp when not set. */
   introImage?: string;
   introImageAlt?: string;
 };

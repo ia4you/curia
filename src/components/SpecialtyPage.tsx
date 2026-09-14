@@ -19,7 +19,7 @@ export default function SpecialtyPage({ data }: { data: SpecialtyContent }) {
             <div className="grid grid-cols-1 items-center gap-10 md:grid-cols-2">
               <div className="relative aspect-[4/3] w-full overflow-hidden rounded-lg">
                 <Image
-                  src={data.introImage ?? "/images/equipo-consulta.jpg"}
+                  src={data.introImage ?? "/images/equipo-consulta.webp"}
                   alt={
                     data.introImageAlt ??
                     "Abogada de Curia Abogados en consulta cercana con una clienta"
