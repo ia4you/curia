@@ -1,6 +1,8 @@
 import type { LucideIcon } from "lucide-react";
 import {
   Handshake,
+  Gavel,
+  Briefcase,
   Scale,
   Users,
   Home,
@@ -44,6 +46,13 @@ export type CardSection = {
   text: string;
 };
 
+export type PracticeArea = {
+  icon: LucideIcon;
+  title: string;
+  description: string;
+  items: string[];
+};
+
 export type SpecialtyContent = {
   slug: string;
   navLabel: string;
@@ -60,7 +69,10 @@ export type SpecialtyContent = {
   /** Optional short-card layout (icon + title + text) used instead of the
    * long-form sectionTitle/subtopics/processParagraphs blocks when present. */
   cardSections?: CardSection[];
-  /** Image shown next to the intro paragraph on cardSections pages.
+  /** Optional grouped layout (icon + title + description + item checklist),
+   * used for areas-de-derecho. Takes precedence over cardSections when present. */
+  practiceAreas?: PracticeArea[];
+  /** Image shown next to the intro paragraph on cardSections/practiceAreas pages.
    * Defaults to equipo-consulta.webp when not set. */
   introImage?: string;
   introImageAlt?: string;
@@ -406,44 +418,95 @@ export const specialties: Record<string, SpecialtyContent> = {
   "areas-de-derecho": {
     slug: "areas-de-derecho",
     navLabel: "Áreas de Derecho",
-    title: "Áreas de Derecho en Las Palmas de Gran Canaria",
+    title: "Áreas de derecho",
     metaTitle: "Áreas de Derecho en Las Palmas de Gran Canaria | Curia Abogados",
     metaDescription:
-      "Conoce las áreas de derecho en las que trabajamos en Las Palmas de Gran Canaria: civil, penal, laboral y mercantil, con trato cercano y personalizado.",
+      "Derecho penal, laboral, civil y mercantil en un único despacho en Las Palmas de Gran Canaria. Asesoramiento y representación legal especializada.",
     intro: [
-      "El derecho abarca muchos ámbitos distintos de la vida cotidiana, y no siempre es fácil saber a qué especialista acudir cuando surge un problema legal. En Curia Abogados trabajamos varias **áreas de derecho** para poder ofrecerte una atención completa, sin tener que buscar un despacho distinto para cada situación.",
-      "Nuestro equipo en Las Palmas de Gran Canaria combina experiencia en distintas ramas del derecho para darte una visión completa de tu caso, sea cual sea su naturaleza.",
+      "El Derecho regula la convivencia en sociedad y se divide en ramas especializadas. En Curia Abogados contamos con profesionales especializados en las principales áreas del derecho, para ofrecerte un servicio completo y personalizado ante cualquier problema legal que se te presente en Las Palmas de Gran Canaria.",
     ],
-    sectionTitle: "Nuestras áreas de trabajo",
-    subtopics: [
-      {
-        title: "Derecho civil",
-        text: "Abarca conflictos entre particulares como **divorcios, herencias, desahucios o incumplimientos de contratos**.",
-      },
-      {
-        title: "Derecho penal",
-        text: "Incluye la defensa o acusación en delitos como estafas, lesiones, robos o hurtos, siempre **velando por tus derechos** en cada fase del proceso.",
-      },
-      {
-        title: "Derecho laboral",
-        text: "Relacionado con conflictos entre empresa y trabajador, como **despidos o reclamaciones de cantidad**.",
-      },
-      {
-        title: "Derecho mercantil",
-        text: "Centrado en las relaciones y conflictos entre empresas, así como en cuestiones societarias y contractuales.",
-      },
-    ],
-    processParagraphs: [
-      "Cuando un problema legal no encaja claramente en una sola categoría, contar con un despacho que trabaje distintas áreas de derecho facilita mucho las cosas: **no tienes que explicar tu caso varias veces** ni coordinar a distintos profesionales por tu cuenta.",
-      "El primer paso siempre es entender bien tu situación, para poder orientarte hacia la vía legal más adecuada, ya sea civil, penal, laboral o mercantil.",
-      "Nuestro objetivo es que, sea cual sea tu problema, tengas un único punto de contacto de confianza que te acompañe de principio a fin.",
-    ],
-    advantagesTitle: "VENTAJAS DE CONTAR CON UN DESPACHO MULTIDISCIPLINAR",
+    advantagesTitle: "POR QUÉ CONTAR CON NUESTROS SERVICIOS",
     advantages: [
-      "Un mismo equipo puede atender distintos aspectos de un mismo problema.",
-      "Visión completa de tu situación legal, sin puntos ciegos entre áreas.",
-      "Ahorro de tiempo al no tener que buscar varios despachos distintos.",
-      "Trato cercano y de confianza durante todo el proceso.",
+      "Asesoramiento en un área del derecho tan extensa como cambiante.",
+      "Representación que evita sanciones por desconocimiento legal.",
+      "Un único despacho para necesidades legales muy distintas.",
+      "Defensa de tus intereses en cada proceso.",
+    ],
+    practiceAreas: [
+      {
+        icon: Gavel,
+        title: "Derecho Penal",
+        description:
+          "Te asesoramos y representamos ante cualquier conducta que la ley considere delictiva, con experiencia en asesoramiento, gestión y juicios.",
+        items: [
+          "Amenazas y coacciones",
+          "Estafas",
+          "Falsedad documental",
+          "Apropiación indebida",
+          "Impago de pensiones de alimentos",
+          "Agresiones y abusos sexuales",
+          "Acoso sexual",
+          "Lesiones",
+          "Delitos contra la propiedad intelectual e industrial",
+          "Delitos informáticos",
+          "Delitos contra la seguridad vial",
+          "Calumnias e injurias",
+          "Hurtos y robos",
+          "Allanamiento de morada y usurpación",
+          "Denuncias y querellas",
+          "Asistencia a comisaría y juzgados",
+          "Juicios rápidos y delitos leves",
+        ],
+      },
+      {
+        icon: Briefcase,
+        title: "Derecho Laboral",
+        description:
+          "Protegemos los derechos y deberes entre empleador y trabajador, en todo tipo de conflictos laborales y prestaciones de la Seguridad Social.",
+        items: [
+          "Despidos",
+          "Reclamaciones de cantidad",
+          "Sanciones",
+          "Modificación de condiciones de trabajo",
+          "Vacaciones",
+          "Clasificación profesional",
+          "Movilidad geográfica",
+          "Acoso laboral",
+          "Incapacidad permanente",
+          "Impugnación de alta médica",
+          "Desempleo",
+          "Jubilación",
+          "Viudedad y orfandad",
+        ],
+      },
+      {
+        icon: Scale,
+        title: "Derecho Civil",
+        description:
+          "Regulamos las relaciones entre personas para proteger sus derechos y bienes: familia, herencias, contratos y procedimientos bancarios.",
+        items: [
+          "Guarda y custodia",
+          "Divorcios y separaciones",
+          "Herencias y testamentos",
+          "Redacción de contratos",
+          "Incumplimientos contractuales",
+          "Responsabilidad civil",
+          "Desahucios",
+          "Arrendamientos",
+          "Accidentes de tráfico",
+          "Cláusulas abusivas y gastos hipotecarios",
+          "Reclamaciones de tarjetas revolving",
+          "Ejecuciones hipotecarias",
+          "Procedimientos monitorios",
+        ],
+      },
+      {
+        icon: Building2,
+        title: "Derecho Mercantil",
+        description:
+          "Regulamos las actividades comerciales, contratos y actos de comercio, incluyendo concurso de acreedores y ley de segunda oportunidad.",
+        items: ["Contratos mercantiles", "Concurso de acreedores", "Ley de Segunda Oportunidad", "Actos de comercio"],
+      },
     ],
   },
 
