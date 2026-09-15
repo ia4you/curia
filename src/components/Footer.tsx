@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { Phone, Mail, MapPin } from "lucide-react";
 
@@ -23,7 +24,13 @@ export default function Footer() {
       <div className="mx-auto max-w-[1600px] px-6 py-16 md:px-12 lg:px-20">
         <div className="grid gap-12 sm:grid-cols-2 lg:grid-cols-4">
           <div>
-            <img src="/images/logo.png" alt="Curia Abogados" className="h-9 w-auto brightness-0" />
+            <Image
+              src="/images/logo.png"
+              alt="Curia Abogados"
+              width={136}
+              height={36}
+              className="h-9 w-auto brightness-0"
+            />
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-ink/90">
               Despacho de abogados en Las Palmas de Gran Canaria. Queremos
               ayudarte a solucionar todo tipo de conflictos que se originan en

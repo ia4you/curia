@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { Phone, Mail, MessageCircle, ChevronDown, Menu, X } from "lucide-react";
 import { dropdownSpecialties } from "@/lib/specialties";
@@ -54,7 +55,13 @@ export default function Header() {
       <div className="sticky top-0 z-50 border-b border-border-soft bg-white">
         <div className="flex items-center justify-between px-6 py-4 md:px-12 lg:px-20">
           <Link href="/" className="flex shrink-0 items-center">
-            <img src="/images/logo.png" alt="Curia Abogados" className="h-9 w-auto" />
+            <Image
+              src="/images/logo.png"
+              alt="Curia Abogados"
+              width={136}
+              height={36}
+              className="h-9 w-auto"
+            />
           </Link>
 
           <nav className="hidden flex-1 items-center justify-center gap-7 md:flex">
