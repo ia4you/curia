@@ -15,6 +15,7 @@ function IntroWithImage({ data }: { data: SpecialtyContent }) {
           src={data.introImage ?? "/images/equipo-consulta.webp"}
           alt={data.introImageAlt ?? "Abogada de Curia Abogados en consulta cercana con una clienta"}
           fill
+          sizes="(max-width: 767px) 100vw, 50vw"
           className="object-cover"
         />
       </div>
@@ -137,6 +138,7 @@ export default function SpecialtyPage({ data }: { data: SpecialtyContent }) {
                 src="/images/contacto-equipo.webp"
                 alt="Saro Morales y Estefanía Pérez, fundadoras de Curia Abogados"
                 fill
+                sizes="(max-width: 767px) 100vw, 50vw"
                 className="object-cover"
               />
             </div>
