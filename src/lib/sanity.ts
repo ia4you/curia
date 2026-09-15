@@ -2,8 +2,8 @@ import { createClient } from "@sanity/client";
 import { createImageUrlBuilder, type SanityImageSource } from "@sanity/image-url";
 
 export const client = createClient({
-  projectId: "wp4og0sd",
-  dataset: "production",
+  projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID || "wp4og0sd",
+  dataset: process.env.NEXT_PUBLIC_SANITY_DATASET || "production",
   apiVersion: "2026-09-15", // hard-coded to a fixed date, not "latest"
   useCdn: true, // fast, cached published-content reads
 });
