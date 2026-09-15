@@ -26,6 +26,10 @@ yarn-error.log*
 .env*.local
 .env
 
+# user-uploaded content (runtime data, not source)
+/public/uploads/*
+!/public/uploads/.gitkeep
+
 # vercel
 .vercel
 

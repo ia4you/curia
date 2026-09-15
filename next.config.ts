@@ -21,15 +21,6 @@ const retiredSlugs = [
 // curiaabogados.es de forma anticipada, pero eso no sustituye tener los
 // redirects funcionando en el dominio real.
 const nextConfig: NextConfig = {
-  images: {
-    remotePatterns: [
-      {
-        protocol: "https",
-        hostname: "cdn.sanity.io",
-        pathname: "/images/wp4og0sd/**",
-      },
-    ],
-  },
   async redirects() {
     return [
       ...specialtySlugs.map((slug) => ({
