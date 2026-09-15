@@ -38,9 +38,9 @@ export default function FeatureIcons() {
               <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-accent/10">
                 <item.icon className="h-7 w-7 text-accent" strokeWidth={1.5} />
               </div>
-              <h3 className="mt-5 text-sm font-semibold uppercase tracking-wide text-ink">
+              <h2 className="mt-5 text-sm font-semibold uppercase tracking-wide text-ink">
                 {item.titulo}
-              </h3>
+              </h2>
               <p className="mt-3 text-sm leading-relaxed text-ink-soft">
                 {item.texto}
               </p>

@@ -43,7 +43,7 @@ export default function ContactSection() {
     <section id="contacto" className="scroll-mt-20 bg-white py-16 md:py-20">
       <div className="mx-auto max-w-[1600px] px-6 md:px-12 lg:px-20">
         <div className="mx-auto max-w-2xl text-center">
-          <p className="text-sm font-bold uppercase tracking-widest text-accent">Contacto</p>
+          <p className="text-sm font-bold uppercase tracking-widest text-accent-dark">Contacto</p>
           <h2 className="mt-3 font-serif text-3xl text-ink md:text-4xl">Contacta con nosotros</h2>
           <p className="mt-4 text-ink-soft">
             Nos avala la experiencia de más de 15 años ayudando a solucionar los conflictos

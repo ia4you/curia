@@ -39,7 +39,7 @@ export default function Footer() {
               <li>
                 <a
                   href="tel:+34928248581"
-                  className="flex items-center gap-2 hover:text-accent-dark"
+                  className="-mx-1 flex items-center gap-2 px-1 py-3.5 hover:text-accent-dark"
                 >
                   <Phone className="h-4 w-4 shrink-0 text-accent-dark" /> 928 248 581
                 </a>

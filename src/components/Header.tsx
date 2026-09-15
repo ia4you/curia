@@ -41,7 +41,10 @@ export default function Header() {
             <Mail className="h-3.5 w-3.5" />
             info@curiaabogados.es
           </a>
-          <a href="tel:+34928248581" className="flex items-center gap-1.5 hover:text-accent">
+          <a
+            href="tel:+34928248581"
+            className="flex items-center gap-1.5 py-3.5 px-2 hover:text-accent"
+          >
             <Phone className="h-3.5 w-3.5" />
             928 248 581
           </a>
@@ -91,7 +94,7 @@ export default function Header() {
 
           <a
             href="/#contacto"
-            className="hidden shrink-0 items-center gap-2 bg-accent px-5 py-2.5 text-xs font-semibold uppercase tracking-wide text-white transition-opacity hover:opacity-90 md:flex"
+            className="hidden shrink-0 items-center gap-2 bg-accent px-5 py-2.5 text-xs font-semibold uppercase tracking-wide text-accent-dark transition-opacity hover:opacity-90 md:flex"
           >
             <MessageCircle className="h-4 w-4" />
             Consulta online
@@ -141,13 +144,13 @@ export default function Header() {
             </a>
             <a
               href="tel:+34928248581"
-              className="flex items-center gap-1.5 py-1 text-sm text-ink-soft"
+              className="-mx-1 flex items-center gap-1.5 px-1 py-3.5 text-sm text-ink-soft"
             >
               <Phone className="h-4 w-4" /> 928 248 581
             </a>
             <a
               href="/#contacto"
-              className="mt-3 inline-block bg-accent px-4 py-2.5 text-center text-sm font-semibold uppercase tracking-wide text-white"
+              className="mt-3 inline-block bg-accent px-4 py-2.5 text-center text-sm font-semibold uppercase tracking-wide text-accent-dark"
               onClick={() => setOpen(false)}
             >
               Consulta online

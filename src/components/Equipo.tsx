@@ -2,9 +2,13 @@ import Image from "next/image";
 import { FacebookIcon, LinkedinIcon, InstagramIcon } from "@/components/icons/SocialIcons";
 
 const socials = [
-  { Icon: FacebookIcon, href: "https://www.facebook.com/Curia-Abogados-104618574853391" },
-  { Icon: LinkedinIcon, href: "https://www.linkedin.com/company/74266128/" },
-  { Icon: InstagramIcon, href: "https://www.instagram.com/curiaabogados/" },
+  {
+    Icon: FacebookIcon,
+    href: "https://www.facebook.com/Curia-Abogados-104618574853391",
+    label: "Facebook",
+  },
+  { Icon: LinkedinIcon, href: "https://www.linkedin.com/company/74266128/", label: "LinkedIn" },
+  { Icon: InstagramIcon, href: "https://www.instagram.com/curiaabogados/", label: "Instagram" },
 ];
 
 export default function Equipo() {
@@ -12,7 +16,7 @@ export default function Equipo() {
     <section id="equipo" className="scroll-mt-20 bg-sand py-20 md:py-28">
       <div className="mx-auto max-w-[1600px] px-6 md:px-12 lg:px-20">
         <div className="text-center">
-          <p className="text-sm font-bold uppercase tracking-widest text-accent">
+          <p className="text-sm font-bold uppercase tracking-widest text-accent-dark">
             Sobre nosotros
           </p>
           <h2 className="mt-3 font-serif text-3xl text-ink md:text-4xl">Nuestro equipo</h2>
@@ -36,12 +40,13 @@ export default function Equipo() {
               Atención cercana y personalizada en cada consulta
             </h3>
             <div className="mt-4 flex justify-center gap-2">
-              {socials.map(({ Icon, href }) => (
+              {socials.map(({ Icon, href, label }) => (
                 <a
                   key={href}
                   href={href}
                   target="_blank"
                   rel="noopener noreferrer"
+                  aria-label={label}
                   className="flex h-8 w-8 items-center justify-center rounded-full bg-ink/10 text-ink transition-colors hover:bg-accent hover:text-white"
                 >
                   <Icon className="h-4 w-4" />

@@ -51,7 +51,7 @@ export default function Especialidades() {
     <section id="especialidades" className="scroll-mt-20 bg-background py-20 md:py-28">
       <div className="mx-auto max-w-[1600px] px-6 md:px-12 lg:px-20">
         <div className="text-center">
-          <p className="text-sm font-bold uppercase tracking-widest text-accent">
+          <p className="text-sm font-bold uppercase tracking-widest text-accent-dark">
             Especialidades
           </p>
           <h2 className="mt-3 font-serif text-3xl text-ink md:text-4xl">
@@ -91,7 +91,7 @@ export default function Especialidades() {
           </p>
           <Link
             href="/administradores-de-fincas"
-            className="mt-5 inline-block text-sm font-semibold uppercase tracking-wide text-accent underline underline-offset-4 hover:text-ink"
+            className="mt-5 inline-block text-sm font-semibold uppercase tracking-wide text-accent-dark underline underline-offset-4 hover:text-ink"
           >
             Saber más sobre este servicio
           </Link>

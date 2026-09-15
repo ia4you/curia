@@ -24,7 +24,7 @@ export default function AboutSection() {
         </div>
 
         <div>
-          <p className="text-sm font-bold uppercase tracking-widest text-accent">
+          <p className="text-sm font-bold uppercase tracking-widest text-accent-dark">
             Sobre nosotros
           </p>
           <h2 className="mt-3 font-serif text-3xl leading-tight text-ink md:text-4xl">
