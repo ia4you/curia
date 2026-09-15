@@ -68,11 +68,11 @@ export default function ContactSection() {
                 <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-accent/10 text-accent">
                   <Phone className="h-4 w-4" />
                 </span>
-                <div className="text-sm text-ink-soft">
-                  <a href="tel:+34928248581" className="block hover:text-accent">
+                <div className="-mx-1 text-sm text-ink-soft">
+                  <a href="tel:+34928248581" className="block px-1 py-3.5 hover:text-accent">
                     928 248 581
                   </a>
-                  <a href="tel:+34679721167" className="block hover:text-accent">
+                  <a href="tel:+34679721167" className="block px-1 py-3.5 hover:text-accent">
                     679 721 167
                   </a>
                 </div>
