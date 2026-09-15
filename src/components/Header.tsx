@@ -24,6 +24,7 @@ const links: NavLink[] = [
       label: specialty.navLabel,
     })),
   },
+  { href: "/blog", label: "Blog" },
   { href: "/#about", label: "Sobre nosotros" },
   { href: "/#contacto", label: "Contacto" },
 ];

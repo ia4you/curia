@@ -12,6 +12,7 @@ const areas = [
 ];
 
 const enlaces = [
+  { label: "Blog", href: "/blog" },
   { label: "Aviso legal", href: "/aviso-legal" },
   { label: "Política de privacidad", href: "/politica-de-privacidad" },
   { label: "Cookies", href: "/cookies" },
