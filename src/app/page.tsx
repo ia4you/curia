@@ -6,6 +6,7 @@ import AboutSection from "@/components/AboutSection";
 import StatsBar from "@/components/StatsBar";
 import Especialidades from "@/components/Especialidades";
 import Equipo from "@/components/Equipo";
+import HomeBlogPreview from "@/components/HomeBlogPreview";
 import CtaBand from "@/components/CtaBand";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
@@ -27,6 +28,7 @@ export default function Home() {
       <StatsBar />
       <Especialidades />
       <Equipo />
+      <HomeBlogPreview />
       <CtaBand />
       <ContactSection />
       <Footer />
