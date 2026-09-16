@@ -7,6 +7,7 @@ import fs from "node:fs/promises";
 import path from "node:path";
 import { prisma } from "@/lib/prisma";
 import { SESSION_COOKIE_NAME, verifySessionToken } from "@/lib/auth";
+import { UPLOADS_DIR } from "@/lib/uploads";
 
 export type PostFormState = { error?: string };
 
@@ -45,12 +46,18 @@ async function uniqueSlug(base: string, ignoreId?: string): Promise<string> {
 }
 
 async function saveCoverImage(file: File): Promise<string> {
-  const bytes = Buffer.from(await file.arrayBuffer());
   const ext = path.extname(file.name).toLowerCase() || "";
   const filename = `${Date.now()}-${Math.random().toString(36).slice(2, 8)}${ext}`;
-  const uploadsDir = path.join(process.cwd(), "public", "uploads");
-  await fs.mkdir(uploadsDir, { recursive: true });
-  await fs.writeFile(path.join(uploadsDir, filename), bytes);
+
+  try {
+    const bytes = Buffer.from(await file.arrayBuffer());
+    await fs.mkdir(UPLOADS_DIR, { recursive: true });
+    await fs.writeFile(path.join(UPLOADS_DIR, filename), bytes);
+  } catch (error) {
+    const reason = error instanceof Error ? error.message : String(error);
+    throw new Error(`No se pudo guardar la imagen de portada: ${reason}`);
+  }
+
   return `/uploads/${filename}`;
 }
 
@@ -74,7 +81,11 @@ export async function createPost(
 
   let coverImageUrl: string | undefined;
   if (coverImage instanceof File && coverImage.size > 0) {
-    coverImageUrl = await saveCoverImage(coverImage);
+    try {
+      coverImageUrl = await saveCoverImage(coverImage);
+    } catch (error) {
+      return { error: error instanceof Error ? error.message : "No se pudo guardar la imagen de portada." };
+    }
   }
 
   await prisma.post.create({
@@ -118,7 +129,11 @@ export async function updatePost(
 
   let coverImageUrl = existing.coverImageUrl ?? undefined;
   if (coverImage instanceof File && coverImage.size > 0) {
-    coverImageUrl = await saveCoverImage(coverImage);
+    try {
+      coverImageUrl = await saveCoverImage(coverImage);
+    } catch (error) {
+      return { error: error instanceof Error ? error.message : "No se pudo guardar la imagen de portada." };
+    }
   }
 
   await prisma.post.update({

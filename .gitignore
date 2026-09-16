@@ -27,8 +27,9 @@ yarn-error.log*
 .env
 
 # user-uploaded content (runtime data, not source)
-/public/uploads/*
-!/public/uploads/.gitkeep
+# Deliberately outside public/ — see src/lib/uploads.ts for why.
+/uploads/*
+!/uploads/.gitkeep
 
 # vercel
 .vercel
