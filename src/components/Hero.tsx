@@ -35,7 +35,7 @@ export default function Hero() {
           personas, con un trato cercano, honesto y profesional.
         </p>
         <a
-          href="#contacto"
+          href="/contacto"
           className="mt-8 inline-block bg-ink px-8 py-4 text-sm font-semibold uppercase tracking-wide text-white transition-colors hover:bg-accent-dark"
         >
           Pedir consulta online

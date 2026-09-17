@@ -8,7 +8,6 @@ import Especialidades from "@/components/Especialidades";
 import Equipo from "@/components/Equipo";
 import HomeBlogPreview from "@/components/HomeBlogPreview";
 import CtaBand from "@/components/CtaBand";
-import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 import { SITE_URL } from "@/lib/site";
 
@@ -40,7 +39,6 @@ export default function Home() {
       <Equipo />
       <HomeBlogPreview />
       <CtaBand />
-      <ContactSection />
       <Footer />
     </main>
   );

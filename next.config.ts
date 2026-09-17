@@ -40,7 +40,7 @@ const nextConfig: NextConfig = {
       },
       {
         source: "/contacto.html",
-        destination: "/#contacto",
+        destination: "/contacto",
         permanent: true,
       },
     ];

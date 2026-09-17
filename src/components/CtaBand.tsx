@@ -13,7 +13,7 @@ export default function CtaBand() {
             </p>
           </div>
           <a
-            href="/#contacto"
+            href="/contacto"
             className="shrink-0 bg-accent-dark px-8 py-4 text-sm font-semibold uppercase tracking-wide text-white transition-opacity hover:opacity-90"
           >
             Contactar ahora

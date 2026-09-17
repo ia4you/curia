@@ -26,7 +26,7 @@ const links: NavLink[] = [
   },
   { href: "/blog", label: "Blog" },
   { href: "/#about", label: "Sobre nosotros" },
-  { href: "/#contacto", label: "Contacto" },
+  { href: "/contacto", label: "Contacto" },
 ];
 
 export default function Header() {
@@ -101,7 +101,7 @@ export default function Header() {
           </nav>
 
           <a
-            href="/#contacto"
+            href="/contacto"
             className="hidden shrink-0 items-center gap-2 bg-accent px-5 py-2.5 text-xs font-semibold uppercase tracking-wide text-accent-dark transition-opacity hover:opacity-90 md:flex"
           >
             <MessageCircle className="h-4 w-4" />
@@ -157,7 +157,7 @@ export default function Header() {
               <Phone className="h-4 w-4" /> 928 248 581
             </a>
             <a
-              href="/#contacto"
+              href="/contacto"
               className="mt-3 inline-block bg-accent px-4 py-2.5 text-center text-sm font-semibold uppercase tracking-wide text-accent-dark"
               onClick={() => setOpen(false)}
             >
