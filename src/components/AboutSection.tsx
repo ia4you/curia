@@ -18,7 +18,7 @@ export default function AboutSection() {
               src="/images/equipo-oficina.webp"
               alt="Estefanía Pérez y Saro Morales, socias fundadoras de Curia Abogados, en su despacho"
               fill
-              sizes="(max-width: 767px) 100vw, 50vw"
+              sizes="(max-width: 767px) calc(100vw - 48px), 50vw"
               className="object-cover object-[55%_center]"
             />
           </div>
