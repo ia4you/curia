@@ -16,6 +16,7 @@ export default function Hero() {
           alt="Estefanía Pérez y Saro Morales en el despacho de Curia Abogados"
           fill
           preload
+          fetchPriority="high"
           sizes="(max-width: 767px) 100vw, (max-width: 1023px) 50vw, 55vw"
           className="object-cover object-[65%_30%]"
         />
