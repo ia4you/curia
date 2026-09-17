@@ -4,3 +4,16 @@
 // (see the note in next.config.ts about the .html redirects that also need
 // to move over at that point).
 export const SITE_URL = "https://curiaabogados.es";
+
+export const SITE_TITLE = "Curia Abogados | Las Palmas de Gran Canaria";
+export const SITE_DESCRIPTION =
+  "Curia Abogados: despacho fundado por Estefanía Pérez y Saro Morales. Más de 15 años de experiencia en derecho civil, penal, mercantil y administración de fincas en Las Palmas de Gran Canaria.";
+
+// Default social share image, reused wherever a page doesn't have a more
+// specific image of its own (specialty pages, blog posts without a cover).
+export const DEFAULT_OG_IMAGE = {
+  url: "/images/hero-oficina.webp",
+  width: 1077,
+  height: 976,
+  alt: "Estefanía Pérez y Saro Morales en el despacho de Curia Abogados",
+};

@@ -4,7 +4,7 @@ import type { Metadata } from "next";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { prisma } from "@/lib/prisma";
-import { SITE_URL } from "@/lib/site";
+import { DEFAULT_OG_IMAGE, SITE_URL } from "@/lib/site";
 
 export const dynamic = "force-dynamic";
 
@@ -25,12 +25,27 @@ export async function generateMetadata({
     return { title: "Blog | Curia Abogados" };
   }
 
+  const title = `${post.title} | Curia Abogados`;
   const description = post.excerpt || truncate(post.content, 160);
+  const url = `${SITE_URL}/blog/${post.slug}`;
+  const ogImage = post.coverImageUrl ? { url: post.coverImageUrl } : DEFAULT_OG_IMAGE;
 
   return {
-    title: `${post.title} | Curia Abogados`,
+    title,
     description,
-    alternates: { canonical: `${SITE_URL}/blog/${post.slug}` },
+    alternates: { canonical: url },
+    openGraph: {
+      url,
+      title,
+      description,
+      images: [ogImage],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      images: [post.coverImageUrl ?? DEFAULT_OG_IMAGE.url],
+    },
   };
 }
 

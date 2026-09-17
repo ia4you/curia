@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import SpecialtyPage from "@/components/SpecialtyPage";
 import { specialties, specialtySlugs } from "@/lib/specialties";
-import { SITE_URL } from "@/lib/site";
+import { DEFAULT_OG_IMAGE, SITE_URL } from "@/lib/site";
 
 export const dynamicParams = false;
 
@@ -19,11 +19,25 @@ export async function generateMetadata({
   const data = specialties[slug];
   if (!data) return {};
 
+  const url = `${SITE_URL}/${slug}`;
+
   return {
     title: data.metaTitle,
     description: data.metaDescription,
     alternates: {
-      canonical: `${SITE_URL}/${slug}`,
+      canonical: url,
+    },
+    openGraph: {
+      url,
+      title: data.metaTitle,
+      description: data.metaDescription,
+      images: [DEFAULT_OG_IMAGE],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: data.metaTitle,
+      description: data.metaDescription,
+      images: [DEFAULT_OG_IMAGE.url],
     },
   };
 }

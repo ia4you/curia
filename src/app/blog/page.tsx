@@ -4,15 +4,30 @@ import type { Metadata } from "next";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { prisma } from "@/lib/prisma";
-import { SITE_URL } from "@/lib/site";
+import { DEFAULT_OG_IMAGE, SITE_URL } from "@/lib/site";
 
 export const dynamic = "force-dynamic";
 
+const title = "Blog | Curia Abogados";
+const description =
+  "Artículos y actualidad legal del despacho Curia Abogados en Las Palmas de Gran Canaria.";
+
 export const metadata: Metadata = {
-  title: "Blog | Curia Abogados",
-  description:
-    "Artículos y actualidad legal del despacho Curia Abogados en Las Palmas de Gran Canaria.",
+  title,
+  description,
   alternates: { canonical: `${SITE_URL}/blog` },
+  openGraph: {
+    url: `${SITE_URL}/blog`,
+    title,
+    description,
+    images: [DEFAULT_OG_IMAGE],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title,
+    description,
+    images: [DEFAULT_OG_IMAGE.url],
+  },
 };
 
 export default async function BlogPage() {

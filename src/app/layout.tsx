@@ -1,10 +1,26 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { DEFAULT_OG_IMAGE, SITE_DESCRIPTION, SITE_TITLE, SITE_URL } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Curia Abogados | Las Palmas de Gran Canaria",
-  description:
-    "Curia Abogados: despacho fundado por Estefanía Pérez y Saro Morales. Más de 15 años de experiencia en derecho civil, penal, mercantil y administración de fincas en Las Palmas de Gran Canaria.",
+  metadataBase: new URL(SITE_URL),
+  title: SITE_TITLE,
+  description: SITE_DESCRIPTION,
+  openGraph: {
+    type: "website",
+    locale: "es_ES",
+    siteName: "Curia Abogados",
+    url: SITE_URL,
+    title: SITE_TITLE,
+    description: SITE_DESCRIPTION,
+    images: [DEFAULT_OG_IMAGE],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: SITE_TITLE,
+    description: SITE_DESCRIPTION,
+    images: [DEFAULT_OG_IMAGE.url],
+  },
 };
 
 export default function RootLayout({
