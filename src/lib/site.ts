@@ -7,7 +7,7 @@ export const SITE_URL = "https://curiaabogados.es";
 
 export const SITE_TITLE = "Curia Abogados | Las Palmas de Gran Canaria";
 export const SITE_DESCRIPTION =
-  "Curia Abogados: despacho fundado por Estefanía Pérez y Saro Morales. Más de 15 años de experiencia en derecho civil, penal, mercantil y administración de fincas en Las Palmas de Gran Canaria.";
+  "Despacho de abogados en Las Palmas de Gran Canaria. Más de 15 años de experiencia en derecho civil, penal, mercantil y administración de fincas.";
 
 // Default social share image, reused wherever a page doesn't have a more
 // specific image of its own (specialty pages, blog posts without a cover).
