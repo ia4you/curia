@@ -18,8 +18,8 @@
   --color-accent: var(--accent);
   --color-accent-dark: var(--accent-dark);
   --color-border-soft: var(--border-soft);
-  --font-serif: "Fraunces", ui-serif, Georgia, serif;
-  --font-sans: "Public Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: var(--font-fraunces), ui-serif, Georgia, serif;
+  --font-sans: var(--font-public-sans), ui-sans-serif, system-ui, sans-serif;
 }
 
 body {
