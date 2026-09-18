@@ -80,7 +80,7 @@ export default async function BlogPostPage({
             <div className="relative mt-8 aspect-[16/9] w-full overflow-hidden rounded-2xl bg-sand">
               <Image
                 src={post.coverImageUrl}
-                alt=""
+                alt={post.title}
                 fill
                 sizes="(min-width: 768px) 900px, 100vw"
                 className="object-cover"

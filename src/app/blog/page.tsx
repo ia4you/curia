@@ -63,7 +63,7 @@ export default async function BlogPage() {
                     <div className="relative aspect-[16/10] w-full overflow-hidden bg-sand">
                       <Image
                         src={post.coverImageUrl}
-                        alt=""
+                        alt={post.title}
                         fill
                         sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
                         className="object-cover transition group-hover:scale-105"
