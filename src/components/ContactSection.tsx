@@ -1,6 +1,7 @@
 "use client";
 
 import { User, UserPlus, Mail, Phone, MessageSquare, PenLine, MapPin } from "lucide-react";
+import ObfuscatedEmail from "@/components/ObfuscatedEmail";
 
 const fields = [
   { id: "nombre", name: "nombre", label: "Nombre", icon: User, type: "text", required: true },
@@ -81,12 +82,11 @@ export default function ContactSection() {
                 <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-accent/10 text-accent">
                   <Mail className="h-4 w-4" />
                 </span>
-                <a
-                  href="mailto:info@curiaabogados.es"
+                <ObfuscatedEmail
+                  user="info"
+                  domain="curiaabogados.es"
                   className="text-sm text-ink-soft hover:text-accent"
-                >
-                  info@curiaabogados.es
-                </a>
+                />
               </div>
               <div className="flex items-start gap-3">
                 <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-accent/10 text-accent">

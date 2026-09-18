@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Phone, Mail, MessageCircle, ChevronDown, Menu, X } from "lucide-react";
 import { dropdownSpecialties } from "@/lib/specialties";
+import ObfuscatedEmail from "@/components/ObfuscatedEmail";
 
 type NavLink = {
   href: string;
@@ -36,13 +37,13 @@ export default function Header() {
     <header className="relative z-50">
       <div className="hidden border-b border-border-soft bg-white md:block">
         <div className="flex justify-end gap-6 px-6 py-2 text-xs text-ink-soft md:px-12 lg:px-20">
-          <a
-            href="mailto:info@curiaabogados.es"
+          <ObfuscatedEmail
+            user="info"
+            domain="curiaabogados.es"
             className="flex items-center gap-1.5 hover:text-accent"
           >
             <Mail className="h-3.5 w-3.5" />
-            info@curiaabogados.es
-          </a>
+          </ObfuscatedEmail>
           <a
             href="tel:+34928248581"
             className="flex items-center gap-1.5 py-3.5 px-2 hover:text-accent"
@@ -144,12 +145,13 @@ export default function Header() {
                 )}
               </div>
             ))}
-            <a
-              href="mailto:info@curiaabogados.es"
+            <ObfuscatedEmail
+              user="info"
+              domain="curiaabogados.es"
               className="mt-2 flex items-center gap-1.5 py-1 text-sm text-ink-soft"
             >
-              <Mail className="h-4 w-4" /> info@curiaabogados.es
-            </a>
+              <Mail className="h-4 w-4" />
+            </ObfuscatedEmail>
             <a
               href="tel:+34928248581"
               className="-mx-1 flex items-center gap-1.5 px-1 py-3.5 text-sm text-ink-soft"

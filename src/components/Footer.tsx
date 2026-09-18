@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Phone, Mail, MapPin } from "lucide-react";
+import ObfuscatedEmail from "@/components/ObfuscatedEmail";
 
 const areas = [
   { label: "Divorcio", href: "/divorcio" },
@@ -53,12 +54,13 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <a
-                  href="mailto:info@curiaabogados.es"
+                <ObfuscatedEmail
+                  user="info"
+                  domain="curiaabogados.es"
                   className="flex items-center gap-2 hover:text-accent-dark"
                 >
-                  <Mail className="h-4 w-4 shrink-0 text-accent-dark" /> info@curiaabogados.es
-                </a>
+                  <Mail className="h-4 w-4 shrink-0 text-accent-dark" />
+                </ObfuscatedEmail>
               </li>
               <li className="flex items-start gap-2">
                 <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-accent-dark" />
