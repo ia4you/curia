@@ -4,7 +4,7 @@ import { DEFAULT_OG_IMAGE, SITE_DESCRIPTION, SITE_TITLE, SITE_URL } from "@/lib/
 
 const legalServiceJsonLd = {
   "@context": "https://schema.org",
-  "@type": "LegalService",
+  "@type": ["LegalService", "Organization"],
   name: "Curia Abogados",
   url: SITE_URL,
   logo: `${SITE_URL}/images/logo.png`,
