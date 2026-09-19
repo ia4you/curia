@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Split, Baby, Briefcase, Lock, ShieldAlert, Bandage } from "lucide-react";
+import { Split, Baby, Briefcase, Lock, ShieldAlert, Bandage, Building2 } from "lucide-react";
 
 const especialidades = [
   {
@@ -79,22 +79,27 @@ export default function Especialidades() {
           ))}
         </div>
 
-        <div className="mt-16 border border-border-soft bg-sand p-8 md:p-10">
-          <h3 className="font-serif text-xl text-ink md:text-2xl">
-            Administradores de fincas
-          </h3>
-          <p className="mt-4 max-w-2xl leading-relaxed text-ink-soft">
-            Gestionamos eficazmente su comunidad de propietarios: desde la
-            administración de cuentas bancarias y cobro de cuotas, hasta la
-            gestión de morosidad y la búsqueda de personal cualificado para
-            el edificio.
-          </p>
-          <Link
-            href="/administradores-de-fincas"
-            className="mt-5 inline-block text-sm font-semibold uppercase tracking-wide text-accent-dark underline underline-offset-4 hover:text-ink"
-          >
-            Saber más sobre este servicio
-          </Link>
+        <div className="mt-16 flex flex-col items-center gap-8 border border-border-soft bg-sand p-8 md:flex-row md:justify-between md:p-10">
+          <div>
+            <h3 className="font-serif text-xl text-ink md:text-2xl">
+              Administradores de fincas
+            </h3>
+            <p className="mt-4 max-w-2xl leading-relaxed text-ink-soft">
+              Gestionamos eficazmente su comunidad de propietarios: desde la
+              administración de cuentas bancarias y cobro de cuotas, hasta la
+              gestión de morosidad y la búsqueda de personal cualificado para
+              el edificio.
+            </p>
+            <Link
+              href="/administradores-de-fincas"
+              className="mt-5 inline-block text-sm font-semibold uppercase tracking-wide text-accent-dark underline underline-offset-4 hover:text-ink"
+            >
+              Saber más sobre este servicio
+            </Link>
+          </div>
+          <div className="flex h-28 w-28 shrink-0 items-center justify-center rounded-full bg-accent/10 md:h-32 md:w-32">
+            <Building2 className="h-14 w-14 text-accent md:h-16 md:w-16" strokeWidth={1.5} />
+          </div>
         </div>
       </div>
     </section>
