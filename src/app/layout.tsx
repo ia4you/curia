@@ -80,7 +80,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="es" className={`${fraunces.variable} ${publicSans.variable}`}>
+    <html lang="es" className={`${fraunces.variable} ${publicSans.variable} scroll-smooth`}>
       <head>
         <script
           type="application/ld+json"

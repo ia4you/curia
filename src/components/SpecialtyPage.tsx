@@ -7,6 +7,15 @@ import SpecialtyHero from "@/components/SpecialtyHero";
 import { renderBold } from "@/lib/renderBold";
 import type { SpecialtyContent } from "@/lib/specialties";
 
+function slugifyAreaTitle(title: string) {
+  return title
+    .normalize("NFD")
+    .replace(/[̀-ͯ]/g, "")
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "");
+}
+
 function IntroWithImage({ data }: { data: SpecialtyContent }) {
   return (
     <div className="grid grid-cols-1 items-center gap-10 md:grid-cols-2">
@@ -41,11 +50,32 @@ export default function SpecialtyPage({ data }: { data: SpecialtyContent }) {
           <div className="mx-auto max-w-[1600px] px-6 md:px-12 lg:px-20">
             <IntroWithImage data={data} />
 
-            <div className="mt-16 space-y-14">
+            <nav
+              aria-label="Índice de áreas de derecho"
+              className="mt-14 flex flex-wrap items-center gap-x-3 gap-y-3 border border-border-soft bg-sand px-6 py-4"
+            >
+              <span className="text-sm font-bold uppercase tracking-widest text-accent-dark">
+                Salta a:
+              </span>
+              {data.practiceAreas.map((area, i) => (
+                <span key={area.title} className="flex items-center gap-3">
+                  {i > 0 && <span className="text-border-soft">·</span>}
+                  <a
+                    href={`#${slugifyAreaTitle(area.title)}`}
+                    className="text-sm text-ink-soft transition-colors hover:text-ink"
+                  >
+                    {area.title.replace(/^Derecho\s+/i, "")}
+                  </a>
+                </span>
+              ))}
+            </nav>
+
+            <div className="mt-14 space-y-14">
               {data.practiceAreas.map((area) => (
                 <div
                   key={area.title}
-                  className="border-t border-border-soft pt-10 first:border-t-0 first:pt-0"
+                  id={slugifyAreaTitle(area.title)}
+                  className="scroll-mt-24 border-t border-border-soft pt-10 first:border-t-0 first:pt-0"
                 >
                   <div className="flex items-start gap-5">
                     <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-full bg-accent/10">
