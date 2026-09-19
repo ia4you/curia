@@ -135,8 +135,8 @@ export default function SpecialtyPage({ data }: { data: SpecialtyContent }) {
           <div className="grid gap-10 md:grid-cols-2 md:items-center">
             <div className="relative aspect-[4/5] w-full overflow-hidden rounded-lg">
               <Image
-                src="/images/contacto-equipo.webp"
-                alt="Saro Morales y Estefanía Pérez, fundadoras de Curia Abogados"
+                src={data.ctaImage ?? "/images/contacto-equipo.webp"}
+                alt={data.ctaImageAlt ?? "Saro Morales y Estefanía Pérez, fundadoras de Curia Abogados"}
                 fill
                 sizes="(max-width: 767px) 100vw, 50vw"
                 className="object-cover"

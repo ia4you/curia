@@ -76,6 +76,10 @@ export type SpecialtyContent = {
    * Defaults to equipo-consulta.webp when not set. */
   introImage?: string;
   introImageAlt?: string;
+  /** Image shown in the "advantages" CTA band at the bottom of every specialty
+   * page. Defaults to contacto-equipo.webp when not set. */
+  ctaImage?: string;
+  ctaImageAlt?: string;
 };
 
 export const specialties: Record<string, SpecialtyContent> = {
@@ -89,6 +93,9 @@ export const specialties: Record<string, SpecialtyContent> = {
     intro: [
       "Un divorcio implica decisiones que van a marcar tu vida durante años: la custodia y manutención de los hijos, el reparto de bienes, el futuro de la vivienda familiar. Contar con una abogada especializada en divorcios no solo te da seguridad jurídica, también te ayuda a atravesar un proceso que suele ser emocionalmente difícil, con alguien que gestiona los plazos y la documentación por ti. En Curia Abogados acompañamos a nuestros clientes en Las Palmas de Gran Canaria en cada tipo de divorcio, cuidando que el proceso sea lo más ágil y claro posible.",
     ],
+    introImage: "/images/equipo-oficina.webp",
+    introImageAlt:
+      "Estefanía Pérez y Saro Morales, socias fundadoras de Curia Abogados, en su despacho",
     advantagesTitle: "VENTAJAS DE CONTAR CON UN ABOGADO PARA TU DIVORCIO",
     advantages: [
       "Orientación clara sobre qué documentación necesitas y cómo prepararla.",
@@ -96,6 +103,9 @@ export const specialties: Record<string, SpecialtyContent> = {
       "Representación en el juzgado si el proceso se convierte en contencioso.",
       "Acompañamiento cercano en un momento personal difícil.",
     ],
+    ctaImage: "/images/equipo-consulta.webp",
+    ctaImageAlt:
+      "Estefanía Pérez y Saro Morales, socias fundadoras de Curia Abogados, en consulta con una clienta",
     cardSections: [
       {
         icon: Handshake,
@@ -145,6 +155,9 @@ export const specialties: Record<string, SpecialtyContent> = {
     intro: [
       "La custodia de los hijos es una de las decisiones más importantes tras la ruptura de una pareja. Cuando hay acuerdo entre ambos progenitores, el proceso suele ser sencillo; cuando no lo hay, es el juez quien debe decidir qué régimen protege mejor el bienestar de los menores. Contar con un abogado especializado en derecho de familia te ayuda a entender qué opciones existen y a defender tu relación con tus hijos durante todo el proceso.",
     ],
+    introImage: "/images/equipo-consulta.webp",
+    introImageAlt:
+      "Estefanía Pérez y Saro Morales, socias fundadoras de Curia Abogados, en consulta con una clienta",
     advantagesTitle: "VENTAJAS DE CONTAR CON UN ABOGADO PARA LA CUSTODIA DE TUS HIJOS",
     advantages: [
       "Una propuesta de custodia adaptada a la realidad de tu familia.",
@@ -152,6 +165,9 @@ export const specialties: Record<string, SpecialtyContent> = {
       "Representación ante el juzgado si no hay acuerdo con la otra parte.",
       "Un acompañamiento centrado en minimizar el impacto emocional en los menores.",
     ],
+    ctaImage: "/images/equipo-oficina.webp",
+    ctaImageAlt:
+      "Estefanía Pérez y Saro Morales, socias fundadoras de Curia Abogados, en su despacho",
     cardSections: [
       {
         icon: User,
@@ -201,6 +217,9 @@ export const specialties: Record<string, SpecialtyContent> = {
     intro: [
       "Sufrir un despido no es fácil, y no todos son justificados. Conocer el tipo de despido que has recibido y actuar dentro de los plazos legales es clave para defender tus derechos. En Curia Abogados te ayudamos a entender tu situación y a decidir los siguientes pasos con seguridad.",
     ],
+    introImage: "/images/equipo-oficina.webp",
+    introImageAlt:
+      "Estefanía Pérez y Saro Morales, socias fundadoras de Curia Abogados, en su despacho",
     advantagesTitle: "VENTAJAS DE CONTAR CON UN ABOGADO PARA TU DESPIDO",
     advantages: [
       "Revisión de la carta de despido y de la indemnización ofrecida.",
@@ -208,6 +227,9 @@ export const specialties: Record<string, SpecialtyContent> = {
       "Negociación con la empresa cuando existe margen para un acuerdo.",
       "Representación en la vía judicial si es necesario.",
     ],
+    ctaImage: "/images/equipo-consulta.webp",
+    ctaImageAlt:
+      "Estefanía Pérez y Saro Morales, socias fundadoras de Curia Abogados, en consulta con una clienta",
     cardSections: [
       {
         icon: FileWarning,
@@ -257,6 +279,9 @@ export const specialties: Record<string, SpecialtyContent> = {
     intro: [
       "Robo y hurto no son lo mismo ante la ley: la diferencia está en si hubo fuerza o intimidación. Sea cual sea tu situación, contar con asesoramiento legal desde el primer momento es clave para proteger tus derechos, tanto si has sido víctima como si te enfrentas a una acusación.",
     ],
+    introImage: "/images/equipo-consulta.webp",
+    introImageAlt:
+      "Estefanía Pérez y Saro Morales, socias fundadoras de Curia Abogados, en consulta con una clienta",
     advantagesTitle: "VENTAJAS DE CONTAR CON UN ABOGADO EN CASOS DE ROBO O HURTO",
     advantages: [
       "Ayuda para presentar la denuncia con toda la información necesaria.",
@@ -264,6 +289,9 @@ export const specialties: Record<string, SpecialtyContent> = {
       "Representación como acusación particular o como defensa, según tu situación.",
       "Acompañamiento durante todo el procedimiento penal.",
     ],
+    ctaImage: "/images/equipo-oficina.webp",
+    ctaImageAlt:
+      "Estefanía Pérez y Saro Morales, socias fundadoras de Curia Abogados, en su despacho",
     cardSections: [
       {
         icon: AlertTriangle,
@@ -313,6 +341,9 @@ export const specialties: Record<string, SpecialtyContent> = {
     intro: [
       "Una estafa se produce cuando alguien te engaña para que actúes en tu propio perjuicio o el de un tercero. Es uno de los delitos más habituales, y puede presentarse de muchas formas: desde un engaño tradicional hasta un fraude informático o comercial. En Curia Abogados te ayudamos a entender tu situación y a actuar con seguridad.",
     ],
+    introImage: "/images/equipo-oficina.webp",
+    introImageAlt:
+      "Estefanía Pérez y Saro Morales, socias fundadoras de Curia Abogados, en su despacho",
     advantagesTitle: "VENTAJAS DE CONTAR CON UN ABOGADO SI HAS SUFRIDO UNA ESTAFA",
     advantages: [
       "Valoración inicial de si los hechos pueden constituir un delito de estafa.",
@@ -320,6 +351,9 @@ export const specialties: Record<string, SpecialtyContent> = {
       "Representación como acusación particular durante el procedimiento.",
       "Acompañamiento cercano durante todo el proceso.",
     ],
+    ctaImage: "/images/equipo-consulta.webp",
+    ctaImageAlt:
+      "Estefanía Pérez y Saro Morales, socias fundadoras de Curia Abogados, en consulta con una clienta",
     cardSections: [
       {
         icon: UserX,
@@ -369,6 +403,9 @@ export const specialties: Record<string, SpecialtyContent> = {
     intro: [
       "Sufrir una lesión causada por otra persona, ya sea de forma intencionada o por imprudencia, afecta tu salud y tu día a día. La ley protege tu derecho a la integridad física, y contar con asesoramiento legal te ayuda a que el responsable asuma las consecuencias y a que recibas la compensación que te corresponde.",
     ],
+    introImage: "/images/equipo-consulta.webp",
+    introImageAlt:
+      "Estefanía Pérez y Saro Morales, socias fundadoras de Curia Abogados, en consulta con una clienta",
     advantagesTitle: "VENTAJAS DE CONTAR CON UN ABOGADO SI HAS SUFRIDO LESIONES",
     advantages: [
       "Asesoramiento sobre qué informes y pruebas médicas conservar.",
@@ -376,6 +413,9 @@ export const specialties: Record<string, SpecialtyContent> = {
       "Representación ante el juzgado para defender tus derechos.",
       "Acompañamiento durante todo tu proceso de recuperación legal.",
     ],
+    ctaImage: "/images/equipo-oficina.webp",
+    ctaImageAlt:
+      "Estefanía Pérez y Saro Morales, socias fundadoras de Curia Abogados, en su despacho",
     cardSections: [
       {
         icon: AlertCircle,
@@ -425,6 +465,9 @@ export const specialties: Record<string, SpecialtyContent> = {
     intro: [
       "El Derecho regula la convivencia en sociedad y se divide en ramas especializadas. En Curia Abogados contamos con profesionales especializados en las principales áreas del derecho, para ofrecerte un servicio completo y personalizado ante cualquier problema legal que se te presente en Las Palmas de Gran Canaria.",
     ],
+    introImage: "/images/equipo-oficina.webp",
+    introImageAlt:
+      "Estefanía Pérez y Saro Morales, socias fundadoras de Curia Abogados, en su despacho",
     advantagesTitle: "POR QUÉ CONTAR CON NUESTROS SERVICIOS",
     advantages: [
       "Asesoramiento en un área del derecho tan extensa como cambiante.",
@@ -432,6 +475,9 @@ export const specialties: Record<string, SpecialtyContent> = {
       "Un único despacho para necesidades legales muy distintas.",
       "Defensa de tus intereses en cada proceso.",
     ],
+    ctaImage: "/images/equipo-consulta.webp",
+    ctaImageAlt:
+      "Estefanía Pérez y Saro Morales, socias fundadoras de Curia Abogados, en consulta con una clienta",
     practiceAreas: [
       {
         icon: Gavel,
@@ -520,6 +566,9 @@ export const specialties: Record<string, SpecialtyContent> = {
     intro: [
       "Gestionar una comunidad de propietarios implica mucho más que cobrar cuotas: contabilidad, obligaciones fiscales, mantenimiento, juntas de vecinos y, en ocasiones, conflictos que requieren respaldo legal. Como despacho de abogados, en Curia Abogados unimos la administración de fincas con la asesoría jurídica, para que tu comunidad esté en manos de un único equipo que conoce tanto la gestión diaria como la ley que la regula.",
     ],
+    introImage: "/images/equipo-consulta.webp",
+    introImageAlt:
+      "Estefanía Pérez y Saro Morales, socias fundadoras de Curia Abogados, en consulta con una clienta",
     advantagesTitle: "VENTAJAS DE CONTAR CON CURIA ABOGADOS PARA TU COMUNIDAD",
     advantages: [
       "Gestión económica y administrativa transparente y ordenada.",
@@ -527,6 +576,9 @@ export const specialties: Record<string, SpecialtyContent> = {
       "Gestión ágil de la morosidad dentro del propio despacho.",
       "Un único equipo de confianza para toda la gestión de tu comunidad.",
     ],
+    ctaImage: "/images/equipo-oficina.webp",
+    ctaImageAlt:
+      "Estefanía Pérez y Saro Morales, socias fundadoras de Curia Abogados, en su despacho",
     cardSections: [
       {
         icon: Calculator,
