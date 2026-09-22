@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Fraunces, Public_Sans } from "next/font/google";
 import "./globals.css";
 import { DEFAULT_OG_IMAGE, SITE_DESCRIPTION, SITE_TITLE, SITE_URL } from "@/lib/site";
+import BackToTop from "@/components/BackToTop";
 
 const fraunces = Fraunces({
   subsets: ["latin"],
@@ -87,7 +88,10 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(legalServiceJsonLd) }}
         />
       </head>
-      <body className="antialiased">{children}</body>
+      <body className="antialiased">
+        {children}
+        <BackToTop />
+      </body>
     </html>
   );
 }
