@@ -21,6 +21,14 @@ const retiredSlugs = [
 // curiaabogados.es de forma anticipada, pero eso no sustituye tener los
 // redirects funcionando en el dominio real.
 const nextConfig: NextConfig = {
+  experimental: {
+    // Tailwind's atomic CSS keeps the stylesheet small (~7KB), so inlining
+    // it avoids the render-blocking <link> request entirely for first-time
+    // visitors, at the cost of no cross-page stylesheet caching — a fine
+    // trade for this site's CSS size. Production-build only (see Next docs
+    // for experimental.inlineCss).
+    inlineCss: true,
+  },
   images: {
     // Default imageSizes jumps straight from 384 to the smallest deviceSize
     // (640), so any image rendered around 360-420px (our Hero/AboutSection
