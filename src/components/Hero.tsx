@@ -3,14 +3,7 @@ import Image from "next/image";
 export default function Hero() {
   return (
     <section className="relative overflow-hidden bg-accent">
-      <div
-        className="relative h-72 w-full sm:h-96 md:absolute md:inset-y-0 md:right-0 md:h-full md:w-1/2 lg:w-[55%]"
-        style={{
-          WebkitMaskImage:
-            "linear-gradient(to right, transparent 0%, black 6%, black 100%)",
-          maskImage: "linear-gradient(to right, transparent 0%, black 6%, black 100%)",
-        }}
-      >
+      <div className="relative h-72 w-full sm:h-96 md:absolute md:inset-y-0 md:right-0 md:h-full md:w-1/2 md:[-webkit-mask-image:linear-gradient(to_right,transparent_0%,black_6%,black_100%)] md:[mask-image:linear-gradient(to_right,transparent_0%,black_6%,black_100%)] lg:w-[55%]">
         <Image
           src="/images/hero-oficina.webp"
           alt="Estefanía Pérez y Saro Morales en el despacho de Curia Abogados"
