@@ -21,6 +21,15 @@ const retiredSlugs = [
 // curiaabogados.es de forma anticipada, pero eso no sustituye tener los
 // redirects funcionando en el dominio real.
 const nextConfig: NextConfig = {
+  images: {
+    // Default imageSizes jumps straight from 384 to the smallest deviceSize
+    // (640), so any image rendered around 360-420px (our Hero/AboutSection
+    // photos on phones) gets forced up to a 640w+ candidate even at modest
+    // device pixel ratios. Adding 480/560 closes that gap with tighter
+    // candidates, cutting bytes for lower/moderate-DPR devices without
+    // touching sharpness on high-DPR ones (they still resolve to 640+).
+    imageSizes: [32, 48, 64, 96, 128, 256, 384, 480, 560],
+  },
   async redirects() {
     return [
       ...specialtySlugs.map((slug) => ({
