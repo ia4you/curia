@@ -34,7 +34,7 @@ export default function Header() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="relative z-50">
+    <header className="contents">
       <div className="hidden border-b border-border-soft bg-white md:block">
         <div className="flex justify-end gap-6 px-6 py-2 text-xs text-ink-soft md:px-12 lg:px-20">
           <ObfuscatedEmail
@@ -119,7 +119,7 @@ export default function Header() {
         </div>
 
         {open && (
-          <nav className="flex flex-col gap-1 border-t border-border-soft px-6 py-4 md:hidden">
+          <nav className="flex max-h-[75vh] flex-col gap-1 overflow-y-auto border-t border-border-soft px-6 py-4 md:hidden">
             {links.map((link) => (
               <div key={link.href}>
                 <Link
